@@ -1,0 +1,24 @@
+.color-nav{
+    /* background-color: rgba(148, 148, 148, 0.5); */
+    /* background-color: transparent; */
+    padding: .25rem 0;
+    font-weight: 700;
+    background-color: #ffffff00;
+    /* background: #282c34; */
+    border-bottom: .25rem solid transparent;
+    margin-bottom: 0
+}
+.color-nav .navbar {
+    display: inline-block;
+    align-items: center;
+  }
+  
+.color-nav .container {
+    width: 100%;
+}
+
+/* .App-header {
+    padding: 0%;
+    align-items: center;
+    color: black;
+  } */
