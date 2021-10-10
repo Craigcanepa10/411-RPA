@@ -114,39 +114,139 @@ function App() {
             </Col>
           </Row>
 
-          <Form.Group className="mb-3" controlId="formGridAddress1">
-            <Form.Label>Address</Form.Label>
+          <Form.Group className="mb-3" controlId="formPresAddress">
+            <Form.Label>Present Address</Form.Label>
             <Form.Control placeholder="1234 Main St" />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formGridAddress2">
-            <Form.Label>Address 2</Form.Label>
-            <Form.Control placeholder="Apartment, studio, or floor" />
+          <Form.Group className="mb-3" controlId="formPermAddress">
+            <Form.Label>Permanent Address</Form.Label>
+            <Form.Control placeholder="1234 Main St" />
           </Form.Group>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>City</Form.Label>
+            <Form.Group as={Col} controlId="formDegree">
+              <Form.Label>Degree</Form.Label>
               <Form.Control />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridState">
-              <Form.Label>State</Form.Label>
-              <Form.Select defaultValue="Choose...">
-                <option>Choose...</option>
-                <option>...</option>
-              </Form.Select>
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Zip</Form.Label>
+            <Form.Group as={Col} controlId="formConcentration">
+              <Form.Label>Concentration</Form.Label>
               <Form.Control />
             </Form.Group>
           </Row>
 
-          <Form.Group className="mb-3" id="formGridCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSemHoursEarned">
+              <Form.Label>Semester Hours Earned</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formMajorGPA">
+              <Form.Label>Major GPA</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formExpGradDate">
+              <Form.Label>Expected Graduation Date</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <Form.Group className="mb-3" controlId="formEmpName">
+            <Form.Label>Employer’s Name</Form.Label>
+            <Form.Control placeholder="Enter Name" />
           </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formEmpAddr">
+            <Form.Label>Employer's Address</Form.Label>
+            <Form.Control placeholder="1234 Main St" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formNTIS">
+            <Form.Label>Name and Title of Immediate Supervisor</Form.Label>
+            <Form.Control placeholder="1234 Main St" />
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSupEmail">
+              <Form.Label>Supervisor’s E-Mail</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formSupPhoneNum">
+              <Form.Label>Supervisor’s Phone #</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <Form.Group as={Col} controlId="formDate">
+            <label>Proposed Dates of Employment</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label>Start:</Form.Label>
+              </Col>
+              <Col>
+                <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>End:</Form.Label>
+              </Col>
+              <Col>
+                <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Employed:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="part-time (at least 20 hours per week)" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label=" full-time (at least 40 hours per week)" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formJobTitle">
+            <Form.Label>Job Title</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formJobResp">
+            <Form.Label>Job Responsibilities</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Signature of Student</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
 
           <Button variant="primary" type="submit">
             Submit
