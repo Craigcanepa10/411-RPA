@@ -248,6 +248,80 @@ function App() {
             </Form.Group>
           </Row>
 
+          <Form.Group className="mb-3">
+            <Form>DO NOT WRITE BELOW THIS LINE</Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formDARD">
+            <Form.Label>Date Application Received by Department</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Action Taken:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Approved" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Not Approved " />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>Reason(s)</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Faculty Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Department Head’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Dean’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+
           <Button variant="primary" type="submit">
             Submit
           </Button>
