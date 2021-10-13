@@ -252,9 +252,15 @@ function App() {
             <Form>DO NOT WRITE BELOW THIS LINE</Form>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formDARD">
-            <Form.Label>Date Application Received by Department</Form.Label>
-            <Form.Control placeholder="" />
+          <Form.Group as={Col} controlId="formDate">
+            <Row>
+              <Col xs="auto">
+                <Form.Label>Date Application Received by Department</Form.Label>
+              </Col>
+              <Col>
+                <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              </Col>
+            </Row>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formEmployed">
@@ -325,6 +331,139 @@ function App() {
           <Button variant="primary" type="submit">
             Submit
           </Button>
+
+          <Form.Group className="mb-3">
+            <Form>Internship Employer Agreement</Form>
+          </Form.Group>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label></Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>will be employed by</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="Enter W#" onChange={(e)=> getwnum(e.target.value)}/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>during the semester</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>20</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>The student will work</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>hours per week for the semester beginning</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>and ending on</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+            </Col>
+          </Row>
+
+          <Form.Group className="mb-3">
+            <Form>CONDITIONS OF AGREEMENT</Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form>1. The employer must provide workers compensation coverage for the student intern. </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>2. The student is expected to be employed 20 hours per week for three hours of credit during the fall and
+            spring semesters, or for 40 hours per week for three hours of credit for the summer semester. </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>4. All employment transfers, withdrawals, or dismissals shall be made jointly by the Department Head,
+              student, and employer. </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>5. Students must submit the following completed forms and all other assignments by 4:00 p.m. on the last
+            class day of the semester: </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
+Objectives CS Form 403 </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>• The Employers Evaluation of the internship Student CS Form 420</Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>• Time and Wage Report CS Form 404</Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>• Activity Log CS Form 405  Three Activity Reports </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>• Three Page Executive Summary </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form>I have read the above agreement and agree in full to the conditions set forth. </Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Employer's Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Form.Group className="mb-3" controlId="formEmpAddr">
+            <Form.Label>Employer's Address</Form.Label>
+            <Form.Control placeholder="1234 Main St" />
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Student's Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+
+          
+
+
+
+          
         </Form>
       {/* </header> */}
       </div>
