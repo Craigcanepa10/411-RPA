@@ -459,6 +459,90 @@ Objectives CS Form 403 </Form>
             Submit
           </Button>
 
+          <Form.Group className="mb-3">
+            <Form> Student’s Measurable Learning Objectives </Form>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form> The objectives must be specific to the student’s job and must clearly describe what the student plans to accomplish during
+              the work experience. They must be reviewed by the student’s immediate supervisor, who may suggest changes or
+              additions.
+              At the end of the semester, the student’s supervisor must evaluate the extent to which the student accomplished each of
+              the objectives by assigning a percentage figure from 0% to 100% in the column to the right of the objective.
+              Note: Before submitting this form at the beginning of the semester, students must provide a copy to their immediate
+              supervisor to complete at the end of the semester.</Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formEmpAddr">
+            <Form.Label>I will accomplish the following objectives by the conclusion of the semester.</Form.Label>
+            <Form.Control placeholder="1" />
+            <Row>
+            <Col xs="auto">
+              <Form.Label>Supervisor’s Rating (%)</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+            <Form.Control placeholder="2" />
+            <Row>
+            <Col xs="auto">
+              <Form.Label>Supervisor’s Rating (%)</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+            <Form.Control placeholder="3" />
+            <Row>
+            <Col xs="auto">
+              <Form.Label>Supervisor’s Rating (%)</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Student’s Approval Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Supervisor’s Approval Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Internship Coordinator Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+
           
 
 
