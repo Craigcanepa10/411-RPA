@@ -408,7 +408,7 @@ function App() {
           </Form.Group>
           <Form.Group className="mb-3">
             <Form>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
-Objectives CS Form 403 </Form>
+            Objectives CS Form 403 </Form>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form>• The Employers Evaluation of the internship Student CS Form 420</Form>
@@ -2208,6 +2208,368 @@ Objectives CS Form 403 </Form>
             Submit
           </Button>
 
+          <Form.Group className="mb-3">
+            <Form>Student's Evaluation of Internship Employer </Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Employer's Name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Job Title</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Overall rating of employer:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Overall rating of work experience:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>How much of your work experience was related to your studies in Computer Science? </label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Rating of learning as a result of your internship experience:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Would you repeat your work experience with the same employer?</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Yes" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="No" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>If not, explain why</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Would you recommend your employer to other internship students?</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Yes" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="No" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>If not, explain why</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>Based upon your work experience, what additional instructional content or revisions should be included
+              within the Curriculum?</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>Any additional comments?</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Student’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Form.Group className="mb-3">
+            <Form>COMPUTER SCIENCE INTERNSHIP WEEKLY ACTIVITY LOG</Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formName">
+              <Form.Label>Student’s name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <table>
+            <tr>
+              <th>Week</th>
+              <th>DESCRIPTION OF ACTIVITIES</th>
+              <th>Hours</th>
+              
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                Total Hours:
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>Note: Specify your weekly activities as accurately as possible in one succinct paragraph. The cells will expand accordingly.</Form>
+          </Form.Group>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+          
         </Form>
       {/* </header> */}
       </div>
