@@ -69,6 +69,11 @@ function App() {
       <div className="App-Form">
       
         <Form>
+
+          <Form.Group className="mb-3">
+            <Form><b>Application for Internship</b></Form>
+          </Form.Group>
+
           <Row>
             <Col xs="auto">
               <Form.Label>Name:</Form.Label>
@@ -233,7 +238,7 @@ function App() {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</Form>
+            <Form align='left'><b>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</b></Form>
           </Form.Group>
 
           <Row className="mb-3">
@@ -327,18 +332,17 @@ function App() {
             </Form.Group>
           </Row>
 
-
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
 
           <Form.Group className="mb-3">
-            <Form>Internship Employer Agreement</Form>
+            <Form><b>Internship Employer Agreement</b></Form>
           </Form.Group>
 
           <Row>
             <Col xs="auto">
-              <Form.Label></Form.Label>
+              <Form.Label>Name:</Form.Label>
             </Col>
             <Col>
               <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
@@ -348,82 +352,85 @@ function App() {
               <Form.Label>will be employed by</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="text" placeholder="Enter W#" onChange={(e)=> getwnum(e.target.value)}/>
+              <Form.Control type="text" placeholder="Enter Company" onChange={(e)=> getwnum(e.target.value)}/>
             </Col>
+          </Row>
 
-            <Col xs="auto">
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
               <Form.Label>during the semester</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
-            </Col>
+              <Form.Control />
+            </Form.Group>
 
-            <Col xs="auto">
-              <Form.Label>20</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
-            </Col>
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
 
+          <Row>
             <Col xs="auto">
               <Form.Label>The student will work</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+              <Form.Control type="text" placeholder="Enter hours" onChange={(e)=> getname(e.target.value)}/>
             </Col>
 
             <Col xs="auto">
-              <Form.Label>hours per week for the semester beginning</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
-            </Col>
-
-            <Col xs="auto">
-              <Form.Label>and ending on</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+              <Form.Label>hours per week for the semester</Form.Label>
             </Col>
           </Row>
 
+          <Row className="mb-3">
+          <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Beginning</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Ending</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+
           <Form.Group className="mb-3">
-            <Form>CONDITIONS OF AGREEMENT</Form>
+            <Form><b>CONDITIONS OF AGREEMENT</b></Form>
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form>1. The employer must provide workers compensation coverage for the student intern. </Form>
+            <Form align='left'><b>1.</b> The employer must provide workers compensation coverage for the student intern. </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>2. The student is expected to be employed 20 hours per week for three hours of credit during the fall and
+            <Form align='left'><b>2.</b> The student is expected to be employed 20 hours per week for three hours of credit during the fall and
             spring semesters, or for 40 hours per week for three hours of credit for the summer semester. </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>4. All employment transfers, withdrawals, or dismissals shall be made jointly by the Department Head,
+            <Form align='left'><b>3.</b> All employment transfers, withdrawals, or dismissals shall be made jointly by the Department Head,
               student, and employer. </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>5. Students must submit the following completed forms and all other assignments by 4:00 p.m. on the last
+            <Form align='left'><b>4.</b> Students must submit the following completed forms and all other assignments by 4:00 p.m. on the last
             class day of the semester: </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
+            <Form align='left'>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
             Objectives CS Form 403 </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• The Employers Evaluation of the internship Student CS Form 420</Form>
+            <Form align='left'>• The Employers Evaluation of the internship Student CS Form 420</Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Time and Wage Report CS Form 404</Form>
+            <Form align='left'>• Time and Wage Report CS Form 404</Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Activity Log CS Form 405  Three Activity Reports </Form>
+            <Form align='left'>• Activity Log CS Form 405  Three Activity Reports </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Three Page Executive Summary </Form>
+            <Form align='left'>• Three Page Executive Summary </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>I have read the above agreement and agree in full to the conditions set forth. </Form>
+            <Form align='left'>I have read the above agreement and agree in full to the conditions set forth. </Form>
           </Form.Group>
 
           <Row className="mb-3">
@@ -455,52 +462,85 @@ function App() {
             </Form.Group>
           </Row>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
 
           <Form.Group className="mb-3">
-            <Form> Student’s Measurable Learning Objectives </Form>
+            <Form><b> Student’s Measurable Learning Objectives </b></Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form> The objectives must be specific to the student’s job and must clearly describe what the student plans to accomplish during
+            <Form align='left'> The objectives must be specific to the student’s job and must clearly describe what the student plans to accomplish during
               the work experience. They must be reviewed by the student’s immediate supervisor, who may suggest changes or
               additions.
               At the end of the semester, the student’s supervisor must evaluate the extent to which the student accomplished each of
               the objectives by assigning a percentage figure from 0% to 100% in the column to the right of the objective.
-              Note: Before submitting this form at the beginning of the semester, students must provide a copy to their immediate
-              supervisor to complete at the end of the semester.</Form>
+            </Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form align='left'><b> Note:</b> Before submitting this form at the beginning of the semester, students must provide a copy to their immediate
+            supervisor to complete at the end of the semester.
+            </Form>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formEmpAddr">
-            <Form.Label>I will accomplish the following objectives by the conclusion of the semester.</Form.Label>
-            <Form.Control placeholder="1" />
+            <Form.Label>I will accomplish the following objectives by the conclusion of the semester.
+            </Form.Label>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
             <Row>
-            <Col xs="auto">
-              <Form.Label>Supervisor’s Rating (%)</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
-            <Form.Control placeholder="2" />
+              <Col xs="auto">
+                <Form.Label>1.</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>Supervisor’s Rating (%)</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Enter %" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
             <Row>
-            <Col xs="auto">
-              <Form.Label>Supervisor’s Rating (%)</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
-            <Form.Control placeholder="3" />
+              <Col xs="auto">
+                <Form.Label>2.</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>Supervisor’s Rating (%)</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Enter %" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
             <Row>
-            <Col xs="auto">
-              <Form.Label>Supervisor’s Rating (%)</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
+              <Col xs="auto">
+                <Form.Label>3.</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>Supervisor’s Rating (%)</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Enter %" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+            </Row>
           </Form.Group>
 
           <Row className="mb-3">
@@ -539,16 +579,16 @@ function App() {
             </Form.Group>
           </Row>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
 
           <Form.Group className="mb-3">
-            <Form>STUDENT’S TIME AND WAGE REPORT</Form>
+            <Form><b>STUDENT’S TIME AND WAGE REPORT</b></Form>
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form>The student must maintain an accurate account of the dates and the hours worked on the job. This information is necessary
+            <Form align='left'>The student must maintain an accurate account of the dates and the hours worked on the job. This information is necessary
               for Departmental records and will be kept strictly confidential. </Form>
           </Form.Group>
 
@@ -1732,9 +1772,13 @@ function App() {
             </Form.Group>
           </Row>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
+
+          <Form.Group className="mb-3">
+            <Form><b>Employer's Evaluation of the Computer Science Internship Student</b></Form>
+          </Form.Group>
 
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formName">
@@ -1766,7 +1810,7 @@ function App() {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form>INSTRUCTIONS:
+            <Form align='left'>INSTRUCTIONS:
               The immediate supervisor will evaluate the student objectively, comparing him/her with other students of
               comparable academic level, with other personnel assigned the same or similarly classified jobs, or with individual
               standards. </Form>
@@ -2204,12 +2248,12 @@ function App() {
             </Form.Group>
           </Row>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
 
           <Form.Group className="mb-3">
-            <Form>Student's Evaluation of Internship Employer </Form>
+            <Form><b>Student's Evaluation of Internship Employer</b> </Form>
           </Form.Group>
 
           <Row className="mb-3">
@@ -2434,7 +2478,7 @@ function App() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label>Based upon your work experience, what additional instructional content or revisions should be included
+            <Form.Label align='left'>Based upon your work experience, what additional instructional content or revisions should be included
               within the Curriculum?</Form.Label>
             <Form.Control placeholder="" />
           </Form.Group>
@@ -2563,7 +2607,7 @@ function App() {
           </table>
 
           <Form.Group className="mb-3">
-            <Form>Note: Specify your weekly activities as accurately as possible in one succinct paragraph. The cells will expand accordingly.</Form>
+            <Form align='left'>Note: Specify your weekly activities as accurately as possible in one succinct paragraph. The cells will expand accordingly.</Form>
           </Form.Group>
 
           <Button variant="primary" type="submit">
