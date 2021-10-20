@@ -69,6 +69,11 @@ function App() {
       <div className="App-Form">
       
         <Form>
+
+          <Form.Group className="mb-3">
+            <Form><b>Application for Internship</b></Form>
+          </Form.Group>
+
           <Row>
             <Col xs="auto">
               <Form.Label>Name:</Form.Label>
@@ -233,7 +238,7 @@ function App() {
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</Form>
+            <Form align='left'><b>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</b></Form>
           </Form.Group>
 
           <Row className="mb-3">
@@ -327,18 +332,17 @@ function App() {
             </Form.Group>
           </Row>
 
-
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
 
           <Form.Group className="mb-3">
-            <Form>Internship Employer Agreement</Form>
+            <Form><b>Internship Employer Agreement</b></Form>
           </Form.Group>
 
           <Row>
             <Col xs="auto">
-              <Form.Label></Form.Label>
+              <Form.Label>Name:</Form.Label>
             </Col>
             <Col>
               <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
@@ -348,82 +352,85 @@ function App() {
               <Form.Label>will be employed by</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="text" placeholder="Enter W#" onChange={(e)=> getwnum(e.target.value)}/>
+              <Form.Control type="text" placeholder="Enter Company" onChange={(e)=> getwnum(e.target.value)}/>
             </Col>
+          </Row>
 
-            <Col xs="auto">
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
               <Form.Label>during the semester</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
-            </Col>
+              <Form.Control />
+            </Form.Group>
 
-            <Col xs="auto">
-              <Form.Label>20</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
-            </Col>
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
 
+          <Row>
             <Col xs="auto">
               <Form.Label>The student will work</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+              <Form.Control type="text" placeholder="Enter hours" onChange={(e)=> getname(e.target.value)}/>
             </Col>
 
             <Col xs="auto">
-              <Form.Label>hours per week for the semester beginning</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
-            </Col>
-
-            <Col xs="auto">
-              <Form.Label>and ending on</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="email" placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)}/>
+              <Form.Label>hours per week for the semester</Form.Label>
             </Col>
           </Row>
 
+          <Row className="mb-3">
+          <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Beginning</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Ending</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+
           <Form.Group className="mb-3">
-            <Form>CONDITIONS OF AGREEMENT</Form>
+            <Form><b>CONDITIONS OF AGREEMENT</b></Form>
           </Form.Group>
 
           <Form.Group className="mb-3">
-            <Form>1. The employer must provide workers compensation coverage for the student intern. </Form>
+            <Form align='left'><b>1.</b> The employer must provide workers compensation coverage for the student intern. </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>2. The student is expected to be employed 20 hours per week for three hours of credit during the fall and
+            <Form align='left'><b>2.</b> The student is expected to be employed 20 hours per week for three hours of credit during the fall and
             spring semesters, or for 40 hours per week for three hours of credit for the summer semester. </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>4. All employment transfers, withdrawals, or dismissals shall be made jointly by the Department Head,
+            <Form align='left'><b>3.</b> All employment transfers, withdrawals, or dismissals shall be made jointly by the Department Head,
               student, and employer. </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>5. Students must submit the following completed forms and all other assignments by 4:00 p.m. on the last
+            <Form align='left'><b>4.</b> Students must submit the following completed forms and all other assignments by 4:00 p.m. on the last
             class day of the semester: </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
-Objectives CS Form 403 </Form>
+            <Form align='left'>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
+            Objectives CS Form 403 </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• The Employers Evaluation of the internship Student CS Form 420</Form>
+            <Form align='left'>• The Employers Evaluation of the internship Student CS Form 420</Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Time and Wage Report CS Form 404</Form>
+            <Form align='left'>• Time and Wage Report CS Form 404</Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Activity Log CS Form 405  Three Activity Reports </Form>
+            <Form align='left'>• Activity Log CS Form 405  Three Activity Reports </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>• Three Page Executive Summary </Form>
+            <Form align='left'>• Three Page Executive Summary </Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form>I have read the above agreement and agree in full to the conditions set forth. </Form>
+            <Form align='left'>I have read the above agreement and agree in full to the conditions set forth. </Form>
           </Form.Group>
 
           <Row className="mb-3">
@@ -455,52 +462,85 @@ Objectives CS Form 403 </Form>
             </Form.Group>
           </Row>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
 
           <Form.Group className="mb-3">
-            <Form> Student’s Measurable Learning Objectives </Form>
+            <Form><b> Student’s Measurable Learning Objectives </b></Form>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form> The objectives must be specific to the student’s job and must clearly describe what the student plans to accomplish during
+            <Form align='left'> The objectives must be specific to the student’s job and must clearly describe what the student plans to accomplish during
               the work experience. They must be reviewed by the student’s immediate supervisor, who may suggest changes or
               additions.
               At the end of the semester, the student’s supervisor must evaluate the extent to which the student accomplished each of
               the objectives by assigning a percentage figure from 0% to 100% in the column to the right of the objective.
-              Note: Before submitting this form at the beginning of the semester, students must provide a copy to their immediate
-              supervisor to complete at the end of the semester.</Form>
+            </Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form align='left'><b> Note:</b> Before submitting this form at the beginning of the semester, students must provide a copy to their immediate
+            supervisor to complete at the end of the semester.
+            </Form>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formEmpAddr">
-            <Form.Label>I will accomplish the following objectives by the conclusion of the semester.</Form.Label>
-            <Form.Control placeholder="1" />
+            <Form.Label>I will accomplish the following objectives by the conclusion of the semester.
+            </Form.Label>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
             <Row>
-            <Col xs="auto">
-              <Form.Label>Supervisor’s Rating (%)</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
-            <Form.Control placeholder="2" />
+              <Col xs="auto">
+                <Form.Label>1.</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>Supervisor’s Rating (%)</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Enter %" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
             <Row>
-            <Col xs="auto">
-              <Form.Label>Supervisor’s Rating (%)</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
-            <Form.Control placeholder="3" />
+              <Col xs="auto">
+                <Form.Label>2.</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>Supervisor’s Rating (%)</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Enter %" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
             <Row>
-            <Col xs="auto">
-              <Form.Label>Supervisor’s Rating (%)</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
+              <Col xs="auto">
+                <Form.Label>3.</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label>Supervisor’s Rating (%)</Form.Label>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Enter %" onChange={(e)=> getname(e.target.value)}/>
+              </Col>
+            </Row>
           </Form.Group>
 
           <Row className="mb-3">
@@ -539,14 +579,2040 @@ Objectives CS Form 403 </Form>
             </Form.Group>
           </Row>
 
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
+
+          <Form.Group className="mb-3">
+            <Form><b>STUDENT’S TIME AND WAGE REPORT</b></Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form align='left'>The student must maintain an accurate account of the dates and the hours worked on the job. This information is necessary
+              for Departmental records and will be kept strictly confidential. </Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formName">
+              <Form.Label>Student’s name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formHours">
+              <Form.Label>Total hours for semester</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formEmployer">
+              <Form.Label>Employer</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formWages">
+              <Form.Label>Total wages for deductions</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Month:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+
+          <table>
+            <tr>
+              <th>Weeks</th>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>Th</th>
+              <th>F</th>
+              <th>S</th>
+              <th>Total Hours</th>
+              <th>Weekly Wages</th>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Monthly Totals:
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Month:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+
+          <table>
+            <tr>
+              <th>Weeks</th>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>Th</th>
+              <th>F</th>
+              <th>S</th>
+              <th>Total Hours</th>
+              <th>Weekly Wages</th>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Monthly Totals:
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Month:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+
+          <table>
+            <tr>
+              <th>Weeks</th>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>Th</th>
+              <th>F</th>
+              <th>S</th>
+              <th>Total Hours</th>
+              <th>Weekly Wages</th>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Monthly Totals:
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Month:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
+          </Row>
+
+          <table>
+            <tr>
+              <th>Weeks</th>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>Th</th>
+              <th>F</th>
+              <th>S</th>
+              <th>Total Hours</th>
+              <th>Weekly Wages</th>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Monthly Totals:
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>I certify that the above time report is a true statement of the hours worked.</Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Student’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Employer Supervisor’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
+
+          <Form.Group className="mb-3">
+            <Form><b>Employer's Evaluation of the Computer Science Internship Student</b></Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formName">
+              <Form.Label>Student’s Name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formJobTitle:">
+              <Form.Label>Job Title</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSemester">
+              <Form.Label>Semester</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formWages">
+              <Form.Label>Employer</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form align='left'>INSTRUCTIONS:
+              The immediate supervisor will evaluate the student objectively, comparing him/her with other students of
+              comparable academic level, with other personnel assigned the same or similarly classified jobs, or with individual
+              standards. </Form>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form>RELATIONS WITH OTHERS</Form>
+          </Form.Group>
+          <table>
+            <tr>
+              <th>Exceptionally well accepted</th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Works well with others </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Gets along satisfactorily </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Has some difficulty working with others</th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Works very poorly with others</th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>  
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>ATTITUDE -- APPLICATION TO WORK </Form>
+          </Form.Group>
+          <table>
+            <tr>
+              <th>Outstanding in enthusiasm</th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Very interested and industrious </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Average in diligence and interest</th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Somewhat indifferent</th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Definitely not interested </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>  
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>JUDGMENT </Form>
+          </Form.Group>
+          <table>
+            <tr>
+              <th>Exceptionally mature </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Above average in making decisions </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Usually makes the right decision </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Often uses poor judgment </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Consistently uses bad judgment  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>  
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>DEPENDABILITY </Form>
+          </Form.Group>
+          <table>
+            <tr>
+              <th>Completely dependable </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Above average in dependability </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Usually dependable </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Sometimes neglectful or careless </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Unreliable  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>  
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>ABILITY TO LEARN </Form>
+          </Form.Group>
+          <table>
+            <tr>
+              <th>Learns very quickly  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Learns readily  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Average in learning </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Rather slow to learn  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Very slow to learn   </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>  
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form>QUALITY OF WORK </Form>
+          </Form.Group>
+          <table>
+            <tr>
+              <th>Excellent  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Very good  </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Average </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Below average </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>
+            <tr>
+              <th>Very poor   </th>
+                <th>
+                  <Form.Group className="mb-3" id="formGridCheckbox">
+                    <Form.Check type="checkbox"/>
+                  </Form.Group>
+                </th>
+            </tr>  
+          </table>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>ATTENDANCE:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Regular" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Irregular" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>PUNCTUALITY:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Regular" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Irregular" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Overall Performance:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Outstanding" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Very Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Average" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Marginal" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Unsatisfactory" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>REMARKS</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>This report has been discussed with student:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Yes" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="No" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Student’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Signature of Immediate Supervisor</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Print Supervisors Name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Phone</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
+
+          <Form.Group className="mb-3">
+            <Form><b>Student's Evaluation of Internship Employer</b> </Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Employer's Name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Job Title</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Overall rating of employer:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Overall rating of work experience:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>How much of your work experience was related to your studies in Computer Science? </label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Rating of learning as a result of your internship experience:</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Excellent" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Good" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Fair" />
+                </Form.Group>
+              </Col>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Poor" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Would you repeat your work experience with the same employer?</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Yes" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="No" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>If not, explain why</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formEmployed">
+            <label>Would you recommend your employer to other internship students?</label>
+            <Row>
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="Yes" />
+                </Form.Group>
+              </Col>
+
+              <Col xs="auto">
+                <Form.Label></Form.Label>
+              </Col>
+              <Col>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox" label="No" />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>If not, explain why</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label align='left'>Based upon your work experience, what additional instructional content or revisions should be included
+              within the Curriculum?</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formReasons">
+            <Form.Label>Any additional comments?</Form.Label>
+            <Form.Control placeholder="" />
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formSig">
+              <Form.Label>Student’s Signature</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formDate2">
+              <Form.Label>Date</Form.Label>
+              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+            </Form.Group>
+          </Row>
+
+          <Form.Group className="mb-3">
+            <Form>COMPUTER SCIENCE INTERNSHIP WEEKLY ACTIVITY LOG</Form>
+          </Form.Group>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} controlId="formName">
+              <Form.Label>Student’s name</Form.Label>
+              <Form.Control />
+            </Form.Group>
+          </Row>
+
+          <table>
+            <tr>
+              <th>Week</th>
+              <th>DESCRIPTION OF ACTIVITIES</th>
+              <th>Hours</th>
+              
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                Total Hours:
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+
+          <Form.Group className="mb-3">
+            <Form align='left'>Note: Specify your weekly activities as accurately as possible in one succinct paragraph. The cells will expand accordingly.</Form>
+          </Form.Group>
+
           <Button variant="primary" type="submit">
             Submit
           </Button>
-
-          
-
-
-
           
         </Form>
       {/* </header> */}
