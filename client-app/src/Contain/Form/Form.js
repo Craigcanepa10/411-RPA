@@ -244,7 +244,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Signature of Student</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -299,7 +301,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Faculty Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -311,7 +315,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Department Head’s Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -323,7 +329,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Dean’s Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -436,7 +444,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Employer's Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -453,7 +463,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Student's Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -546,7 +558,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Student’s Approval Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -558,7 +572,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Supervisor’s Approval Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -570,7 +586,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Internship Coordinator Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -1751,7 +1769,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Student’s Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -1763,7 +1783,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Employer Supervisor’s Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -2215,7 +2237,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Student’s Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -2227,7 +2251,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Signature of Immediate Supervisor</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
@@ -2491,7 +2517,9 @@ function App() {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formSig">
               <Form.Label>Student’s Signature</Form.Label>
-              <Form.Control />
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox"/>
+              </Form.Group>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formDate2">
