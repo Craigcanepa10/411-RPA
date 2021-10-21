@@ -1,4 +1,5 @@
 // import logo from '../../Photo/secCMPSLogoEdit.png';
+// import { Formik } from 'formik';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import React, { useState, useEffect } from 'react';
@@ -7,7 +8,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Navy from "../../Comp/Navbar/Navbar"
 import './Form.css';
-
+import logo from '../../Photo/SLU-shield.png';
 function App() {
   const [name, getname] = useState("");
   const [wnum, getwnum] = useState("");
@@ -28,13 +29,15 @@ function App() {
   function denyos(){
     if(getMobileOperatingSystem() === "Windows Phone"|| getMobileOperatingSystem() === "Android"|| getMobileOperatingSystem() === "iOS"){
       document.getElementById("overlay").style.display = "block";
+      document.getElementById("AppForm").style.display = "none";
+      // document.getElementsById("AppForm").style.display = "none";
     }
   }
 
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Windows Phone must come first because its UA also contains "Android"
+    // Windows Phone must come first because its UA also contains "Android" Should make Windows Phone exclusive page saying to get a new better phone
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
     }
@@ -62,10 +65,27 @@ function App() {
         {/* <div className="App-header"> */}
         <Navy/>
         <div id="overlay">
-          <p>We are sorry mobile is not supported at the moment.</p>
+          <div className="AppM">
+            <div className="AppM-header">
+              <img src={logo} className="App-logo" width="160" height="150" alt="logo" />
+              <p>We are sorry mobile is not a supported way of filling out this form</p>
+              <p>We appologize for this inconvenience.</p>
+            </div>
+          </div>
+        </div>
+        <div id="overlay2">
+          <div className="AppM">
+            <div className="AppM-header">
+              <img src={logo} className="App-logo" width="160" height="150" alt="logo" />
+              <p>We are sorry but the viewport must be widder to complete this form</p>
+              <p>We appologize for this inconvenience.</p>
+            </div>
+          </div>
         </div>
         {/* </div> */}
       </Container>
+      <Container>
+      <div id="AppForm">
       <div className="App-Form">
       
         <Form>
@@ -118,218 +138,263 @@ function App() {
               <Form.Control type="tel" placeholder="Enter Your Work Phone Number" onChange={(e)=> getworknum(e.target.value)}/>
             </Col>
           </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group className="mb-3" controlId="formPresAddress">
-            <Form.Label>Present Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Present Address:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="1234 Main St" />
+            </Col>
 
-          <Form.Group className="mb-3" controlId="formPermAddress">
-            <Form.Label>Permanent Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formDegree">
-              <Form.Label>Degree</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formConcentration">
-              <Form.Label>Concentration</Form.Label>
-              <Form.Control />
-            </Form.Group>
+            <Col xs="auto">
+              <Form.Label>Permanent Address:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="1234 Main St" />
+            </Col>
           </Row>
+          <Form.Label></Form.Label>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSemHoursEarned">
-              <Form.Label>Semester Hours Earned</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formMajorGPA">
-              <Form.Label>Major GPA</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formExpGradDate">
-              <Form.Label>Expected Graduation Date</Form.Label>
-              <Form.Control />
-            </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Degree:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Your Degree"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Concentration: </Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Your Concentration"/>
+            </Col>
           </Row>
-
-          <Form.Group className="mb-3" controlId="formEmpName">
-            <Form.Label>Employer’s Name</Form.Label>
-            <Form.Control placeholder="Enter Name" />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formEmpAddr">
-            <Form.Label>Employer's Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formNTIS">
-            <Form.Label>Name and Title of Immediate Supervisor</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSupEmail">
-              <Form.Label>Supervisor’s E-Mail</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formSupPhoneNum">
-              <Form.Label>Supervisor’s Phone #</Form.Label>
-              <Form.Control />
-            </Form.Group>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Semester Hours Earned:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Total Hours Earned"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Major GPA:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="GPA of your major classes"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Expected Graduation Date:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Fall 2022"/>
+            </Col>
           </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Employer’s Name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Employer's Name" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Employer's Address:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="1234 Main St" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Name and Title of Immediate Supervisor:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Johnny Appleseed Apple placehoder guy" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Supervisor’s E-Mail:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Your Supervisors Email here"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Supervisor’s Phone #:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Your Supervisors Phone # here"/>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group as={Col} controlId="formDate">
-            <label>Proposed Dates of Employment</label>
-            <Row>
-              <Col xs="auto">
-                <Form.Label>Start:</Form.Label>
-              </Col>
-              <Col>
-                <input type="date" name="dateofbirth" id="dateofbirth"></input>
-              </Col>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Proposed Dates of Employment:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Start:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+              {/* <input type="date" name="dateofbirth" id="dateofbirth"></input> */}
+            </Col>
 
-              <Col xs="auto">
-                <Form.Label>End:</Form.Label>
-              </Col>
-              <Col>
-                <input type="date" name="dateofbirth" id="dateofbirth"></input>
-              </Col>
-            </Row>
-          </Form.Group>
+            <Col sm="auto">
+              <Form.Label>End:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Employed:</label>
-            <Row>
-              <Col xs="auto">
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Employed:</Form.Label>
+            </Col>
+            <Col xs="auto">
                 <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="part-time (at least 20 hours per week)" />
-                </Form.Group>
-              </Col>
+            </Col>
+            <Col xs="auto">
+                <Form.Check type="checkbox" label="part-time (at least 20 hours per week)" />
+            </Col>
 
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label=" full-time (at least 40 hours per week)" />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form.Group>
+            <Col xs="auto">
+              <Form.Label></Form.Label>
+            </Col>
+            <Col xs="auto">
+                <Form.Check type="checkbox" label="full-time (at least 40 hours per week)" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group className="mb-3" controlId="formJobTitle">
-            <Form.Label>Job Title</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Job Title:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter your Job title" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group className="mb-3" controlId="formJobResp">
-            <Form.Label>Job Responsibilities</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Job Responsibilities:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter the responcibilities of your job" />
+            </Col>
+          </Row>
 
           <Form.Group className="mb-3">
             <Form align='left'><b>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</b></Form>
           </Form.Group>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Signature of Student</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Signature of Student:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Type your digital signature here"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+              </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
           </Row>
 
           <Form.Group className="mb-3">
             <Form>DO NOT WRITE BELOW THIS LINE</Form>
           </Form.Group>
 
-          <Form.Group as={Col} controlId="formDate">
-            <Row>
-              <Col xs="auto">
-                <Form.Label>Date Application Received by Department</Form.Label>
-              </Col>
-              <Col>
-                <input type="date" name="dateofbirth" id="dateofbirth"></input>
-              </Col>
-            </Row>
-          </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Date Application Received by Department:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
+          </Row>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Action Taken:</label>
-            <Row>
-              <Col xs="auto">
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Action Taken:</Form.Label>
+            </Col>
+            <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
+              <Col xs="auto">
                   <Form.Check type="checkbox" label="Approved" />
-                </Form.Group>
               </Col>
 
               <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Not Approved " />
-                </Form.Group>
               </Col>
-            </Row>
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label>Reason(s)</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Faculty Signature</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Reason(s):</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Reasons for Aproval or denial" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Faculty Signature:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Check type="checkbox" label="Digital signature" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
           </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Department Head’s Signature</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Department Head's Signature:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Check type="checkbox" label="Digital signature" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
           </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Dean’s Signature</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Dean's Signature:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Check type="checkbox" label="Digital signature" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
           </Row>
 
           <div class="wrapper">
@@ -341,56 +406,55 @@ function App() {
           </Form.Group>
 
           <Row>
-            <Col xs="auto">
-              <Form.Label>Name:</Form.Label>
-            </Col>
             <Col>
-              <Form.Control type="text" placeholder="Enter Name" onChange={(e)=> getname(e.target.value)}/>
+              <Form.Control type="text" placeholder="Student Name" onChange={(e)=> getname(e.target.value)}/>
             </Col>
 
             <Col xs="auto">
               <Form.Label>will be employed by</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="text" placeholder="Enter Company" onChange={(e)=> getwnum(e.target.value)}/>
+              <Form.Control type="text" placeholder="Company Name" onChange={(e)=> getwnum(e.target.value)}/>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>during the semester</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter semester and year"/>
             </Col>
           </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>during the semester</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
-          </Row>
-
+          <Form.Label></Form.Label>
           <Row>
             <Col xs="auto">
               <Form.Label>The student will work</Form.Label>
             </Col>
-            <Col>
+            <Col xs={3}>
               <Form.Control type="text" placeholder="Enter hours" onChange={(e)=> getname(e.target.value)}/>
             </Col>
 
             <Col xs="auto">
-              <Form.Label>hours per week for the semester</Form.Label>
+              <Form.Label>hours per week for the semester beginning</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>, and</Form.Label>
             </Col>
           </Row>
 
-          <Row className="mb-3">
-          <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Beginning</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Ending</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>ending on</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
           </Row>
 
 
@@ -434,33 +498,50 @@ function App() {
           </Form.Group>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Employer's Signature</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} xs={7}>
+              <Form.Check type="checkbox"/>
+              <Form.Label>Employer's Digital Signature</Form.Label>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
+              <Form.Control type="date"/>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
             </Form.Group>
           </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group className="mb-3" controlId="formEmpAddr">
-            <Form.Label>Employer's Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
-          </Form.Group>
+          <Row>
+            <Col>
+              <Form.Control placeholder="1234 Main St" />
+              <Form.Label>Employer's Address</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter your City" />
+              <Form.Label>City</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter your State" />
+              <Form.Label>State</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter your zip code" />
+              <Form.Label>Zip Code</Form.Label>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Student's Signature</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} xs={7}>
+              <Form.Check type="checkbox"/>
+              <Form.Label>Student's Digital Signature</Form.Label>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
+              <Form.Control type="date"/>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
             </Form.Group>
           </Row>
+          <Form.Label></Form.Label>
 
           <div class="wrapper">
             <div class="divider div-transparent"></div>
@@ -488,7 +569,7 @@ function App() {
             <Form.Label>I will accomplish the following objectives by the conclusion of the semester.
             </Form.Label>
           </Form.Group>
-
+          <Form.Label></Form.Label>
           <Form.Group as={Col} controlId="formEmployed">
             <Row>
               <Col xs="auto">
@@ -506,7 +587,7 @@ function App() {
               </Col>
             </Row>
           </Form.Group>
-
+          <Form.Label></Form.Label>
           <Form.Group as={Col} controlId="formEmployed">
             <Row>
               <Col xs="auto">
@@ -524,7 +605,7 @@ function App() {
               </Col>
             </Row>
           </Form.Group>
-
+          <Form.Label></Form.Label>
           <Form.Group as={Col} controlId="formEmployed">
             <Row>
               <Col xs="auto">
@@ -543,39 +624,41 @@ function App() {
             </Row>
           </Form.Group>
 
+          <Form.Label></Form.Label>
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Student’s Approval Signature</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Student's Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              <Form.Control type="date"/>
+            </Form.Group>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row className="mb-3">
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Supervisor’s Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
+            </Form.Group>
+
+            <Form.Group as={Col} xs={2}>
+              <Form.Label>Date</Form.Label>
+              <Form.Control type="date"/>
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Supervisor’s Approval Signature</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Internship Coordinator’s Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
-          </Row>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Internship Coordinator Signature</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              <Form.Control type="date"/>
             </Form.Group>
           </Row>
 
@@ -592,30 +675,320 @@ function App() {
               for Departmental records and will be kept strictly confidential. </Form>
           </Form.Group>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formName">
-              <Form.Label>Student’s name</Form.Label>
-              <Form.Control />
-            </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Student’s name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Student Name"/>
+            </Col>
 
-            <Form.Group as={Col} controlId="formHours">
-              <Form.Label>Total hours for semester</Form.Label>
-              <Form.Control />
-            </Form.Group>
+            <Col xs="auto">
+              <Form.Label>Total hours for semester:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter total hours for semester"/>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Employer name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter employer's name"/>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>Total wages for deductions:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter total wages for deductions"/>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Month:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
+            </Col>
           </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formEmployer">
-              <Form.Label>Employer</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formWages">
-              <Form.Label>Total wages for deductions</Form.Label>
-              <Form.Control />
-            </Form.Group>
-          </Row>
-
+          <table>
+            <tr>
+              <th>Weeks</th>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>Th</th>
+              <th>F</th>
+              <th>S</th>
+              <th>Total Hours</th>
+              <th>Weekly Wages</th>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Monthly Totals:
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group className="mb-3" id="formGridCheckbox">
+                  <Form.Check type="checkbox"/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox2">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+                <Form.Group as={Col} controlId="formBox3">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+          </table>
+          <Form.Label></Form.Label>
           <Row>
             <Col xs="auto">
               <Form.Label>Month:</Form.Label>
@@ -898,6 +1271,7 @@ function App() {
             </tr>
           </table>
 
+          <Form.Label></Form.Label>
           <Row>
             <Col xs="auto">
               <Form.Label>Month:</Form.Label>
@@ -1180,288 +1554,7 @@ function App() {
             </tr>
           </table>
 
-          <Row>
-            <Col xs="auto">
-              <Form.Label>Month:</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control type="text" placeholder="" onChange={(e)=> getname(e.target.value)}/>
-            </Col>
-          </Row>
-
-          <table>
-            <tr>
-              <th>Weeks</th>
-              <th>S</th>
-              <th>M</th>
-              <th>T</th>
-              <th>W</th>
-              <th>Th</th>
-              <th>F</th>
-              <th>S</th>
-              <th>Total Hours</th>
-              <th>Weekly Wages</th>
-            </tr>
-            <tr>
-              <td>
-                <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox2">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox3">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox2">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox3">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox2">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox3">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox2">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox3">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Monthly Totals:
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox"/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox2">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-              <td>
-                <Form.Group as={Col} controlId="formBox3">
-                  <Form.Control/>
-                </Form.Group>
-              </td>
-            </tr>
-          </table>
-
+          <Form.Label></Form.Label>
           <Row>
             <Col xs="auto">
               <Form.Label>Month:</Form.Label>
@@ -1749,28 +1842,28 @@ function App() {
           </Form.Group>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Student’s Signature</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Student's Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              <Form.Control type="date"/>
+            </Form.Group>
+
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Employer Supervisor’s Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
+            </Form.Group>
+
+            <Form.Group as={Col} xs={2}>
+              <Form.Label>Date</Form.Label>
+              <Form.Control type="date"/>
             </Form.Group>
           </Row>
+{/* changes here */}
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Employer Supervisor’s Signature</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
-          </Row>
 
           <div class="wrapper">
             <div class="divider div-transparent"></div>
@@ -1780,34 +1873,47 @@ function App() {
             <Form><b>Employer's Evaluation of the Computer Science Internship Student</b></Form>
           </Form.Group>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formName">
-              <Form.Label>Student’s Name</Form.Label>
-              <Form.Control />
-            </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Student’s name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Student Name"/>
+            </Col>
 
-            <Form.Group as={Col} controlId="formJobTitle:">
-              <Form.Label>Job Title</Form.Label>
-              <Form.Control />
-            </Form.Group>
+            <Col xs="auto">
+              <Form.Label>Job Title:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter student's job title"/>
+            </Col>
           </Row>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Semester:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter semester"/>
+            </Col>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSemester">
-              <Form.Label>Semester</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formWages">
-              <Form.Label>Employer</Form.Label>
-              <Form.Control />
-            </Form.Group>
+            <Col xs="auto">
+              <Form.Label>Employer:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter your employer"/>
+            </Col>
           </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group as={Col} controlId="formDate2">
+          <Row>
+            <Col xs="auto">
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-          </Form.Group>
+            </Col>
+            <Col xs={2}>
+              <Form.Control type="date"/>
+            </Col>
+          </Row>
 
           <Form.Group className="mb-3">
             <Form align='left'>INSTRUCTIONS:
@@ -2091,14 +2197,14 @@ function App() {
                 </th>
             </tr>  
           </table>
-
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>ATTENDANCE:</label>
             <Row>
+              <Col xs="auto">
+                <Form.Label>ATTENDANCE:</Form.Label>
+              </Col>
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Regular" />
                 </Form.Group>
@@ -2107,21 +2213,21 @@ function App() {
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Irregular" />
                 </Form.Group>
               </Col>
             </Row>
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>PUNCTUALITY:</label>
+            <Form.Label></Form.Label>
             <Row>
+              <Col xs="auto">
+                <Form.Label>PUNCTUALITY:</Form.Label>
+              </Col>
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Regular" />
                 </Form.Group>
@@ -2130,17 +2236,17 @@ function App() {
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Irregular" />
                 </Form.Group>
               </Col>
             </Row>
-          </Form.Group>
-
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Overall Performance:</label>
+            
             <Row>
+              <Col xs="auto">
+                <Form.Label>Overall Performance:</Form.Label>
+              </Col>
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
@@ -2182,20 +2288,25 @@ function App() {
                 </Form.Group>
               </Col>
             </Row>
-          </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label>REMARKS</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>REMARKS:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>This report has been discussed with student:</label>
             <Row>
+              <Col xs="auto">
+                <Form.Label>This report has been discussed with student:</Form.Label>
+              </Col>
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Yes" />
                 </Form.Group>
@@ -2204,48 +2315,48 @@ function App() {
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="No" />
                 </Form.Group>
               </Col>
             </Row>
-          </Form.Group>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Student’s Signature</Form.Label>
-              <Form.Control />
+            <Row className="mb-3">
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Student's Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              <Form.Control type="date"/>
+            </Form.Group>
+
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Immediate Supervisor’s Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
+            </Form.Group>
+
+            <Form.Group as={Col} xs={2}>
+              <Form.Label>Date</Form.Label>
+              <Form.Control type="date"/>
             </Form.Group>
           </Row>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Signature of Immediate Supervisor</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
-            </Form.Group>
-          </Row>
-
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Print Supervisors Name</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Phone</Form.Label>
-              <Form.Control />
-            </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Print Supervisors Name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Supervisors Name"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Phone #:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Supervisors phone number"/>
+            </Col>
           </Row>
 
           <div class="wrapper">
@@ -2256,178 +2367,182 @@ function App() {
             <Form><b>Student's Evaluation of Internship Employer</b> </Form>
           </Form.Group>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Employer's Name</Form.Label>
-              <Form.Control />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="formDate2">
-              <Form.Label>Job Title</Form.Label>
-              <Form.Control />
-            </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Employer's Name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter the Employer's Name"/>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Job Title:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter your Job Title"/>
+            </Col>
           </Row>
 
-          
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Overall rating of employer:</label>
             <Row>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Excellent" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Good" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Fair" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Poor" />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form.Group>
+          <Col xs="auto">
+            <Form.Label>Overall rating of employer:</Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Excellent" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Good" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Fair" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Poor" />
+            </Form.Group>
+          </Col>
+        </Row>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Overall rating of work experience:</label>
-            <Row>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Excellent" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Good" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Fair" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Poor" />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form.Group>
+          <Row>
+          <Col xs="auto">
+            <Form.Label>Overall rating of work experience:</Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Excellent" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Good" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Fair" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Poor" />
+            </Form.Group>
+          </Col>
+        </Row>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>How much of your work experience was related to your studies in Computer Science? </label>
-            <Row>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Excellent" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Good" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Fair" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Poor" />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form.Group>
+          <Row>
+          <Col xs="auto">
+            <Form.Label>How much of your work experience was related to your studies in Computer Science?:</Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Excellent" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Good" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Fair" />
+            </Form.Group>
+          </Col>
+          <Col xs="auto">
+            <Form.Label></Form.Label>
+          </Col>
+          <Col xs="auto">
+            <Form.Group className="mb-3" id="formGridCheckbox">
+              <Form.Check type="checkbox" label="Poor" />
+            </Form.Group>
+          </Col>
+        </Row>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Rating of learning as a result of your internship experience:</label>
-            <Row>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Excellent" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Good" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Fair" />
-                </Form.Group>
-              </Col>
-              <Col xs="auto">
-                <Form.Label></Form.Label>
-              </Col>
-              <Col>
-                <Form.Group className="mb-3" id="formGridCheckbox">
-                  <Form.Check type="checkbox" label="Poor" />
-                </Form.Group>
-              </Col>
-            </Row>
-          </Form.Group>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Would you repeat your work experience with the same employer?</label>
-            <Row>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Rating of learning as a result of your internship experience:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Label></Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox" label="Excellent" />
+              </Form.Group>
+            </Col>
+            <Col xs="auto">
+              <Form.Label></Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox" label="Good" />
+              </Form.Group>
+            </Col>
+            <Col xs="auto">
+              <Form.Label></Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox" label="Fair" />
+              </Form.Group>
+            </Col>
+            <Col xs="auto">
+              <Form.Label></Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Group className="mb-3" id="formGridCheckbox">
+                <Form.Check type="checkbox" label="Poor" />
+              </Form.Group>
+            </Col>
+          </Row>
+
+          <Row>
+              <Col xs="auto">
+                <Form.Label>Would you repeat your work experience with the same employer?:</Form.Label>
+              </Col>
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Yes" />
                 </Form.Group>
@@ -2436,26 +2551,31 @@ function App() {
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="No" />
                 </Form.Group>
               </Col>
             </Row>
-          </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label>If not, explain why</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>If not, explain why:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="" />
+            </Col>
+          </Row>
 
-          <Form.Group as={Col} controlId="formEmployed">
-            <label>Would you recommend your employer to other internship students?</label>
+          <Form.Label></Form.Label>
             <Row>
+              <Col xs="auto">
+                <Form.Label>Would you recommend your employer to other internship students?:</Form.Label>
+              </Col>
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="Yes" />
                 </Form.Group>
@@ -2464,39 +2584,47 @@ function App() {
               <Col xs="auto">
                 <Form.Label></Form.Label>
               </Col>
-              <Col>
+              <Col xs="auto">
                 <Form.Group className="mb-3" id="formGridCheckbox">
                   <Form.Check type="checkbox" label="No" />
                 </Form.Group>
               </Col>
             </Row>
-          </Form.Group>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label>If not, explain why:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="" />
+            </Col>
+          </Row>
 
           <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label>If not, explain why</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label align='left'>Based upon your work experience, what additional instructional content or revisions should be included
+            <Form.Label>Based upon your work experience, what additional instructional content or revisions should be included
               within the Curriculum?</Form.Label>
             <Form.Control placeholder="" />
           </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formReasons">
-            <Form.Label>Any additional comments?</Form.Label>
-            <Form.Control placeholder="" />
-          </Form.Group>
+          <Form.Label></Form.Label>
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Any additional comments?</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Put additional comments here" />
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
           <Row className="mb-3">
-            <Form.Group as={Col} controlId="formSig">
-              <Form.Label>Student’s Signature</Form.Label>
-              <Form.Control />
+            <Form.Group as={Col} xs={7}>
+              <Form.Label>Student's Digital Signature</Form.Label>
+              <Form.Check type="checkbox"/>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="formDate2">
+            <Form.Group as={Col} xs={2}>
               <Form.Label>Date</Form.Label>
-              <input type="date" name="dateofbirth" id="dateofbirth"></input>
+              <Form.Control type="date"/>
             </Form.Group>
           </Row>
 
@@ -2504,17 +2632,23 @@ function App() {
             <Form>COMPUTER SCIENCE INTERNSHIP WEEKLY ACTIVITY LOG</Form>
           </Form.Group>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formName">
-              <Form.Label>Student’s name</Form.Label>
-              <Form.Control />
-            </Form.Group>
+
+          <Row>
+            <Col xs="auto">
+              <Form.Label>Student’s name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control placeholder="Enter Student's name"/>
+            </Col>
           </Row>
+
+          <Form.Label></Form.Label>
 
           <table>
             <tr>
               <th>Week</th>
               <th>DESCRIPTION OF ACTIVITIES</th>
+              <th></th>
               <th>Hours</th>
               
             </tr>
@@ -2529,6 +2663,7 @@ function App() {
                   <Form.Control/>
                 </Form.Group>
               </td>
+              <td></td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
@@ -2546,6 +2681,7 @@ function App() {
                   <Form.Control/>
                 </Form.Group>
               </td>
+              <td></td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
@@ -2563,6 +2699,7 @@ function App() {
                   <Form.Control/>
                 </Form.Group>
               </td>
+              <td></td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
@@ -2580,6 +2717,7 @@ function App() {
                   <Form.Control/>
                 </Form.Group>
               </td>
+              <td></td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
@@ -2597,8 +2735,8 @@ function App() {
                   <Form.Control/>
                 </Form.Group>
               </td>
+              <td>Total Hours:</td>
               <td>
-                Total Hours:
                 <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
                 </Form.Group>
@@ -2617,6 +2755,8 @@ function App() {
         </Form>
       {/* </header> */}
       </div>
+      </div>
+      </Container>
     </div>
   );
 }

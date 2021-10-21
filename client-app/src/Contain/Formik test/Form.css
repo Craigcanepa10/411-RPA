@@ -34,21 +34,6 @@
   cursor: pointer;
 }
 
-#overlay2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(255, 255, 255);
-  z-index: 2;
-  cursor: pointer;
-}
-
 #AppForm {
   font-family: 'Roboto Condensed', sans-serif;
   display: block;
@@ -56,21 +41,8 @@
 
 /* above is for the mobile overlay */
 
-
-
 .App {
   text-align: center;
-}
-
-Form{
-    min-width: 800px;
-    /* min-height: 10566px; */
-    max-width: 1500px;
-    max-height: 10566px;
-    /* width: 696px;
-    height: 10566px; */
-    /* padding-bottom: 5%; */
-    /* display:flex; */
 }
 
 table, th, td {
