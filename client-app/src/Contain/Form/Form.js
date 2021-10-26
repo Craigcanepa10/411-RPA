@@ -91,10 +91,10 @@ function App() {
         <Form>
 
           <Form.Group className="mb-3">
-            <Form><b>Application for Internship</b></Form>
+            <Form.Label><b>CS Form 401: Application for Internship</b></Form.Label>
           </Form.Group>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Name:</Form.Label>
             </Col>
@@ -118,7 +118,7 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Cell Phone #:</Form.Label>
             </Col>
@@ -140,7 +140,7 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Present Address:</Form.Label>
             </Col>
@@ -157,22 +157,22 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Degree:</Form.Label>
             </Col>
             <Col>
               <Form.Control placeholder="Your Degree"/>
             </Col>
-            <Col xs="auto">
+            {/* <Col xs="auto">
               <Form.Label>Concentration: </Form.Label>
             </Col>
             <Col>
               <Form.Control placeholder="Your Concentration"/>
-            </Col>
+            </Col> */}
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Semester Hours Earned:</Form.Label>
             </Col>
@@ -193,7 +193,8 @@ function App() {
             </Col>
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Employer’s Name:</Form.Label>
             </Col>
@@ -208,7 +209,8 @@ function App() {
             </Col>
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Name and Title of Immediate Supervisor:</Form.Label>
             </Col>
@@ -217,7 +219,8 @@ function App() {
             </Col>
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row  id="FIX">
             <Col xs="auto">
               <Form.Label>Supervisor’s E-Mail:</Form.Label>
             </Col>
@@ -233,7 +236,7 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Proposed Dates of Employment:</Form.Label>
             </Col>
@@ -254,7 +257,7 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Employed:</Form.Label>
             </Col>
@@ -274,7 +277,7 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Job Title:</Form.Label>
             </Col>
@@ -284,12 +287,13 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Job Responsibilities:</Form.Label>
             </Col>
             <Col>
-              <Form.Control placeholder="Enter the responcibilities of your job" />
+              <textarea name="message" rows="2" cols="115" placeholder="As English speaking professionals we have the button on the left, and the lable on the right"></textarea>
+              {/* <Form.Control placeholder="Enter the responcibilities of your job" /> */}
             </Col>
           </Row>
 
@@ -297,7 +301,7 @@ function App() {
             <Form align='left'><b>NOTE: A copy of your college transcript must be submitted with this application! You may print a copy from Leonet.</b></Form>
           </Form.Group>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Signature of Student:</Form.Label>
             </Col>
@@ -316,7 +320,7 @@ function App() {
             <Form>DO NOT WRITE BELOW THIS LINE</Form>
           </Form.Group>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Date Application Received by Department:</Form.Label>
             </Col>
@@ -325,7 +329,7 @@ function App() {
             </Col>
           </Row>
 
-          <Row>
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Action Taken:</Form.Label>
             </Col>
@@ -341,7 +345,8 @@ function App() {
               </Col>
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Reason(s):</Form.Label>
             </Col>
@@ -350,7 +355,8 @@ function App() {
             </Col>
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Faculty Signature:</Form.Label>
             </Col>
@@ -364,9 +370,9 @@ function App() {
               <Form.Control type="date"/>
             </Col>
           </Row>
-
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Department Head's Signature:</Form.Label>
             </Col>
@@ -380,9 +386,9 @@ function App() {
               <Form.Control type="date"/>
             </Col>
           </Row>
-
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
               <Form.Label>Dean's Signature:</Form.Label>
             </Col>
@@ -402,7 +408,8 @@ function App() {
           </div>
 
           <Form.Group className="mb-3">
-            <Form><b>Internship Employer Agreement</b></Form>
+            <Form.Label><b>CS Form 402</b></Form.Label>
+            <Form.Label><b>Internship Employer Agreement</b></Form.Label>
           </Form.Group>
 
           <Row>
@@ -548,7 +555,8 @@ function App() {
           </div>
 
           <Form.Group className="mb-3">
-            <Form><b> Student’s Measurable Learning Objectives </b></Form>
+            <Form.Label><b>CS Form 403</b></Form.Label>
+            <Form.Label><b>Student’s Measurable Learning Objectives</b></Form.Label>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form align='left'> The objectives must be specific to the student’s job and must clearly describe what the student plans to accomplish during
@@ -667,7 +675,8 @@ function App() {
           </div>
 
           <Form.Group className="mb-3">
-            <Form><b>STUDENT’S TIME AND WAGE REPORT</b></Form>
+            <Form.Label><b>CS Form 404</b></Form.Label>
+            <Form.Label><b>STUDENT’S TIME AND WAGE REPORT</b></Form.Label>
           </Form.Group>
 
           <Form.Group className="mb-3">
@@ -1870,7 +1879,8 @@ function App() {
           </div>
 
           <Form.Group className="mb-3">
-            <Form><b>Employer's Evaluation of the Computer Science Internship Student</b></Form>
+            <Form.Label><b>CS Form 420</b></Form.Label>
+            <Form.Label><b>Employer's Evaluation of the Computer Science Internship Student</b></Form.Label>
           </Form.Group>
 
           <Row>
@@ -2364,7 +2374,8 @@ function App() {
           </div>
 
           <Form.Group className="mb-3">
-            <Form><b>Student's Evaluation of Internship Employer</b> </Form>
+            <Form.Label><b>CS Form 410</b></Form.Label>
+            <Form.Label><b>Student's Evaluation of Internship Employer</b> </Form.Label>
           </Form.Group>
 
           <Row>
@@ -2616,6 +2627,12 @@ function App() {
           </Row>
           <Form.Label></Form.Label>
 
+          <div class="wrapper">
+            <div class="divider div-transparent"></div>
+          </div>
+
+          <Form.Label><b>CS Form 405</b></Form.Label>
+
           <Row className="mb-3">
             <Form.Group as={Col} xs={7}>
               <Form.Label>Student's Digital Signature</Form.Label>
@@ -2644,12 +2661,12 @@ function App() {
 
           <Form.Label></Form.Label>
 
-          <table>
+          <table id="breakfree">
             <tr>
-              <th>Week</th>
+              <th id="VSmoll">Week</th>
               <th>DESCRIPTION OF ACTIVITIES</th>
-              <th></th>
-              <th>Hours</th>
+              <th id="Smoll"></th>
+              <th id="VSmoll">Hours</th>
               
             </tr>
             <tr>
@@ -2660,7 +2677,65 @@ function App() {
               </td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
+                </Form.Group>
+              </td>
+              <td></td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
+                </Form.Group>
+              </td>
+              <td></td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
+                </Form.Group>
+              </td>
+              <td></td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Form.Group as={Col} controlId="formBox1">
+                  <Form.Control/>
+                </Form.Group>
+              </td>
+              <td>
+              <Form.Group as={Col} controlId="formBox1">
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
                 </Form.Group>
               </td>
               <td></td>
@@ -2678,7 +2753,8 @@ function App() {
               </td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
                 </Form.Group>
               </td>
               <td></td>
@@ -2696,7 +2772,8 @@ function App() {
               </td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
                 </Form.Group>
               </td>
               <td></td>
@@ -2714,7 +2791,8 @@ function App() {
               </td>
               <td>
               <Form.Group as={Col} controlId="formBox1">
-                  <Form.Control/>
+                  {/* <Form.Control/> */}
+                  <textarea name="message" rows="2" cols="145"></textarea>
                 </Form.Group>
               </td>
               <td></td>
@@ -2726,16 +2804,16 @@ function App() {
             </tr>
             <tr>
               <td>
-              <Form.Group as={Col} controlId="formBox1">
+              {/* <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
-                </Form.Group>
+                </Form.Group> */}
               </td>
               <td>
-              <Form.Group as={Col} controlId="formBox1">
+              {/* <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
-                </Form.Group>
+                </Form.Group> */}
               </td>
-              <td>Total Hours:</td>
+              <td id="Smoll">Total Hours:</td>
               <td>
                 <Form.Group as={Col} controlId="formBox1">
                   <Form.Control/>
