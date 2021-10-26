@@ -34,21 +34,6 @@
   cursor: pointer;
 }
 
-#overlay2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(255, 255, 255);
-  z-index: 2;
-  cursor: pointer;
-}
-
 #AppForm {
   font-family: 'Roboto Condensed', sans-serif;
   display: block;
@@ -56,60 +41,17 @@
 
 /* above is for the mobile overlay */
 
-#FIX{
-  padding-bottom: 2%;
-}
-
-#Smoll{
-  width: fit-content;
-}
-
 .App {
   text-align: center;
 }
 
-Form{
-    min-width: 800px;
-    /* min-height: 10566px; */
-    max-width: 1500px;
-    max-height: 10566px;
-    /* width: 696px;
-    height: 10566px; */
-    /* padding-bottom: 5%; */
-    /* display:flex; */
-}
-
-
-
-table{
+/* table, th, td {
   border:1px solid black;
   table-layout: fixed;
   width: 100%;  
   font-size: small;
-}
+} */
 
-td,th {
-  border:1px solid black;
-  font-size: small;
-}
-
-#VSmoll{
-  width: 7%;
-}
-
-#Smoll{
-  /* table-layout: fixed; */
-  width: 7%;
-}
-
-#breakfree{
-  border:1px solid black;
-  /* table-layout: fixed; */
-  width: 100%;  
-  font-size: small;
-  border:1px solid black;
-  font-size: small;
-}
 
 .App-logo {
   align-items: center;
@@ -173,17 +115,11 @@ td,th {
 }
 
 /* custom styles */
-
 body {
   padding: 4em;
   background: #e5e5e5;
-  /* font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; */
-}
-/* body {
-  padding: 4em;
-  background: #e5e5e5;
   font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-} */
+}
 label {
   display: block;
 }
@@ -193,16 +129,7 @@ input {
   background-color: #fff;
   padding: 3px 5px;
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
-  /* width: 190px; */
-}
-
-textarea{
-  border: 1px solid #c4c4c4;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 3px 5px;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
-  /* width: 190px; */
+  width: 190px;
 }
 
 .wrapper

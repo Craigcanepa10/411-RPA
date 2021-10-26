@@ -6,7 +6,7 @@ import "./Navbar.css"
 export default function Admin(props) {
 
     return(
-      // <div className="App-header">
+      <div className="App-headerry">
         <Navbar className="justify-content-center">
               <Navbar.Brand>
                 <img
@@ -19,9 +19,13 @@ export default function Admin(props) {
               </Navbar.Brand>
             {/* <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">             
-
             </Navbar.Collapse> */}
         </Navbar>
-      // </div>
+        {/* ZACK PUT WHAT IS BELOW THIS COMMENT INTO YOUR SITES NAV BAR */}
+        <Navbar className="justify-content-center">
+        <div id="google_translate_element"></div>
+        </Navbar>
+        {/* ZACK PUT WHAT IS ABOVE THIS COMMENT INTO YOUR SITES NAV BAR */}
+      </div>
     );
 }
