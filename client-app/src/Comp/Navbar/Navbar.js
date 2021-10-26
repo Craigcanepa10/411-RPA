@@ -25,6 +25,7 @@ export default function Admin(props) {
         <Navbar className="justify-content-center">
         <div id="google_translate_element"></div>
         </Navbar>
+        {/* Made a build fix */}
         {/* ZACK PUT WHAT IS ABOVE THIS COMMENT INTO YOUR SITES NAV BAR */}
       </div>
     );
