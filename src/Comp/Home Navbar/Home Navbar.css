@@ -1,0 +1,47 @@
+.color-nav{
+    /* background-color: rgba(148, 148, 148, 0.5); */
+    /* background-color: transparent; */
+    padding: .25rem 0;
+    font-weight: 700;
+    background-color: #ffffff00;
+    /* background: #282c34; */
+    border-bottom: .25rem solid transparent;
+    margin-bottom: 0
+}
+.color-nav .navbar {
+  display: inline-block;
+  align-items: center;
+}
+/* Google Translate dropdown CSS Below this comment */
+
+/* select.goog-te-combo{
+  width: 190px;
+  height: 300px;
+  font-size: 100pt;
+}
+
+.goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active{
+  font-size: 17px;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+}
+.goog-te-gadget img{
+  width: 43px;
+  height: 20px;
+}
+.goog-te-gadget{
+  font-size: 17px !important;
+} */
+
+/* Google Translate dropdown CSS Above this comment */
+  
+.color-nav .container {
+    width: 100%;
+}
+
+/* .App-header {
+    padding: 0%;
+    align-items: center;
+    color: black;
+  } */

@@ -77,7 +77,7 @@ function App() {
           <div className="AppM">
             <div className="AppM-header">
               <img src={logo} className="App-logo" width="160" height="150" alt="logo" />
-              <p>We are sorry but the viewport must be widder to complete this form</p>
+              <p>We are sorry but the viewport must be widder to complete this form, and if you are on mobile, you will not be able to complete the form as mobile is not supported.</p>
               <p>We appologize for this inconvenience.</p>
             </div>
           </div>
