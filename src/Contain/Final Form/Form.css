@@ -34,28 +34,6 @@
   cursor: pointer;
 }
 
-.buttonyty {
-  width: 186px;
-  height: 44px;
-  align-self: center;
-}
-
-#stu401 {
-  display: block;
-}
-
-#stu402 {
-  display: none;
-}
-
-#stu403 {
-  display: none;
-}
-
-#formdone{
-  display: none;
-}
-
 #overlay2 {
   font-family: 'Roboto Condensed', sans-serif;
   position: fixed;
