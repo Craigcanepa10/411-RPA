@@ -2,7 +2,11 @@
 // import { Formik } from 'formik';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import React, { useEffect } from 'react';
+import { Redirect } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
+import { createInternForm } from '../../graphql/mutations'
+import { getInternForm } from '../../graphql/queries'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
@@ -15,6 +19,34 @@ function App() {
   // const [cap, setcap] = useState(0);
   // const [room, setroom] = useState("");
   // const [approval, setapproval] = useState(false);
+  const [typedID, getTypedID] = useState("")
+  const [redirect, setRedirect] = useState(false);
+  const [formState, setFormState] = useState({
+    Student_Name: "",
+    Company_Name: "",
+    Semester_And_Year: "",
+    Hours_Per_Week: "",
+    Proposed_Start: "",
+    Proposed_End: "",
+    Company_Address: "",
+    Employer_City: "",
+    Employer_State: "",
+    Employer_Zip: "",
+    Form_401: "",
+    Form_402: "",
+    Form_403: "",
+    Form_404: "",
+    Form_405: "",
+    Form_410: "",
+    Form_420: "",
+    Student_Will_Accomplish_1: "",
+    Student_Will_Accomplish_2: "",
+    Student_Will_Accomplish_3: "",
+    Supervisor_Rating_1: "",
+    Supervisor_Rating_2: "",
+    Supervisor_Rating_3: "",
+    id: "",
+  });
 
   useEffect(()=>{
     denyos();
@@ -27,6 +59,56 @@ function App() {
       // document.getElementsById("AppForm").style.display = "none";
     }
   }
+
+  async function getdata(){
+    try {
+      console.log(typedID);
+      const result = await API.graphql(graphqlOperation(getInternForm, {id: typedID} //,{
+        // Student_Name,
+        // Company_Name,
+        // Semester_And_Year,
+        // Hours_Per_Week,
+        // Proposed_Start,
+        // Proposed_End,
+        // Company_Address,
+        // Employer_City,
+        // Employer_State,
+        // Employer_Zip,
+        // Form_401,
+        // Form_402,
+        // Form_403,
+        // Form_404,
+        // Form_405,
+        // Form_410,
+        // Form_420,
+        // Student_Will_Accomplish_1,
+        // Student_Will_Accomplish_2,
+        // Student_Will_Accomplish_3,
+        // Supervisor_Rating_1,
+        // Supervisor_Rating_2,
+        // Supervisor_Rating_3,
+        // id,
+      // }
+      )
+      )
+      
+      
+     console.log("gotten")
+     console.log(result);
+    //  getid(result.data.createInternForm.id);
+    setRedirect(true);
+    <Redirect to={`/employer/${typedID}`}/>
+   } catch (err) {
+     console.log('error getting data, or id given does not exist:', err)
+   }
+ }
+
+ const handleSubmit = (event) => {
+  const form = event.currentTarget;
+  event.preventDefault();
+  event.stopPropagation();
+  getdata();
+};
 
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -49,7 +131,7 @@ function App() {
   }
   
   
-  return (
+  return !redirect ?(
     
     <div className="App">
       
@@ -80,14 +162,14 @@ function App() {
       <div className="App-FormF">
         <p><b>Welcome to the Online CMPS 400 Internship Form Employer Portal</b></p>
         
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Row>
             <Col xs="auto">
               <Form.Label>Form ID:</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="string" placeholder="Enter The Form ID Sent by Email" />
+              <Form.Control type="string" placeholder="Enter The Form ID Sent by Email" onChange={(e)=> getTypedID(e.target.value)}/>
             </Col>
             </Row>
           </Form.Group>
@@ -101,7 +183,7 @@ function App() {
       </div>
       </Container>
     </div>
-  );
+  ) : (<Redirect to = {`/employer/${typedID}`}/>);
 }
 
 export default App;
