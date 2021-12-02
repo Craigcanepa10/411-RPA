@@ -104,8 +104,8 @@ function App() {
     }
     catch (err) {
       console.log('error getting user:', err);
-      setRedirect(true);
-      <Redirect to='/' />
+      // setRedirect(true);
+      // <Redirect to='/' />
     }
   }
 
@@ -122,14 +122,6 @@ function App() {
     }
   }
 
-  // function emailsender(){
-  //   emailjs.send("service_q3da0db","template_argwril",{
-  //     to_name: {comName},
-  //     from_name: {name},
-  //     ID: "gdfhj15625r62gy12ebhjk",
-  //     emp_email: "pao@pao.pao",
-  //     });
-  // }
   const emailsender = (e) => {
     emailjs.send('service_q3da0db','template_argwril',{
       to_name: comName,
