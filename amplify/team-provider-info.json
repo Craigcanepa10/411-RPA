@@ -14,18 +14,6 @@
     "categories": {
       "auth": {
         "sluintern46991e29": {}
-      },
-      "function": {
-        "sluintern58e9ba75": {
-          "sesEmail": "do-not-reply@sluintern.com",
-          "deploymentBucketName": "amplify-amplify5c49bed508934-staging-200146-deployment",
-          "s3Key": "amplify-builds/sluintern58e9ba75-4642676e35546976452b-build.zip"
-        },
-        "sluinterne92673e7": {
-          "sesEmail": "do-not-reply@sluintern.com",
-          "deploymentBucketName": "amplify-amplify5c49bed508934-staging-200146-deployment",
-          "s3Key": "amplify-builds/sluinterne92673e7-5067472b686c4c75636b-build.zip"
-        }
       }
     }
   }
