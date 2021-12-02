@@ -34,28 +34,6 @@
   cursor: pointer;
 }
 
-.buttonyty {
-  width: 186px;
-  height: 44px;
-  align-self: center;
-}
-
-#stu401 {
-  display: block;
-}
-
-#stu402 {
-  display: none;
-}
-
-#stu403 {
-  display: none;
-}
-
-#formdone{
-  display: none;
-}
-
 #overlay2 {
   font-family: 'Roboto Condensed', sans-serif;
   position: fixed;
@@ -152,10 +130,10 @@ td,th {
   color: black;
 }
 
-.App-Form {
+.App-Formy {
   background-color: white;
   /* min-height: 100vh; */
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   /* padding-left: 5%;
   padding-right: 5%; */
@@ -165,6 +143,52 @@ td,th {
   
   font-size: 15pt;
   color: black;
+}
+
+.buttony {
+  background-image: url('../../Photo/btn_google_signin_dark_normal_web.png');
+  background-size:cover;
+  width: 191px;
+  height: 46px;
+}
+
+.Cards{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.card{
+  padding-bottom: 5%;
+  display:flex;
+}
+
+.cardy {
+  width: 561px;
+  /* height: 300px; */
+}
+
+.buttonyt {
+  width: 186px;
+  height: 44px;
+}
+
+.App-Form-bod {
+  text-align: left;
+  background-color: white;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 5%;
+  padding-right: 5%; */
+  padding: 5%;
+  
+  
+  font-size: 15pt;
+  color: black;
+}
+
+.Buttoney {
+  width: 25%;
 }
 
 .App-Form .Form {

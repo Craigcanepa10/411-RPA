@@ -1,14 +1,21 @@
 import Navbar from 'react-bootstrap/Navbar'
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../../Photo/secCMPSLogoEdit.png"
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 export default function Admin(props) {
+  const [activeItem, setActiveItem] = useState("/");
+
 
     return(
       <div className="App-headerry">
         <Navbar className="justify-content-center">
-              <Navbar.Brand>
+              <Navbar.Brand
+              as={Link}
+              to="/"
+              active={activeItem === "/"}
+              onClick={() => setActiveItem("/")}>
                 <img
                   alt="logo"
                   src={logo}

@@ -34,28 +34,6 @@
   cursor: pointer;
 }
 
-.buttonyty {
-  width: 186px;
-  height: 44px;
-  align-self: center;
-}
-
-#stu401 {
-  display: block;
-}
-
-#stu402 {
-  display: none;
-}
-
-#stu403 {
-  display: none;
-}
-
-#formdone{
-  display: none;
-}
-
 #overlay2 {
   font-family: 'Roboto Condensed', sans-serif;
   position: fixed;
@@ -71,10 +49,13 @@
   cursor: pointer;
 }
 
-#AppForm {
+.AppForm {
   font-family: 'Roboto Condensed', sans-serif;
   display: block;
+  align-items: center;
 }
+
+
 
 /* above is for the mobile overlay */
 
@@ -152,10 +133,11 @@ td,th {
   color: black;
 }
 
-.App-Form {
+.App-FormF {
   background-color: white;
+  width: 50%;
   /* min-height: 100vh; */
-  display: flex;
+  display:inline-block;
   flex-direction: column;
   /* padding-left: 5%;
   padding-right: 5%; */
@@ -166,6 +148,7 @@ td,th {
   font-size: 15pt;
   color: black;
 }
+
 
 .App-Form .Form {
   padding: 10pt;
