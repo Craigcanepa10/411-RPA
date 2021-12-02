@@ -11,7 +11,7 @@ import Navy from "../../Comp/Navbar/Navbar"
 import './Form.css';
 import logo from '../../Photo/SLU-shield.png';
 import * as emailjs from 'emailjs-com'
-import { Auth, API, graphqlOperation } from 'aws-amplify';
+import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
 // import { InternForm } from '../../models';
 import { createInternForm } from '../../graphql/mutations'
 // import { listInternForms } from '../../graphql/queries'
@@ -95,6 +95,15 @@ function App() {
     }
   }
 
+  // async function ionViewCanEnter() {
+  //   try {
+  //       await Auth.currentAuthenticatedUser();
+  //       return true;
+  //   } catch {
+  //       return false;
+  //   }
+  // }
+
   async function checkuser(){
     try{
       const user = await Auth.currentAuthenticatedUser();
@@ -103,9 +112,9 @@ function App() {
       getemail(user.attributes.email)
     }
     catch (err) {
-      console.log('error getting user:', err);
-      // setRedirect(true);
-      // <Redirect to='/' />
+      console.log(err);
+      setRedirect(true);
+      <Redirect to='/' />
     }
   }
 
