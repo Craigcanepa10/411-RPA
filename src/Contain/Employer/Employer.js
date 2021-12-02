@@ -4,8 +4,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Redirect } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
-import { createInternForm } from '../../graphql/mutations'
+import { API, graphqlOperation } from 'aws-amplify';
+// import { createInternForm } from '../../graphql/mutations'
 import { getInternForm } from '../../graphql/queries'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -21,32 +21,32 @@ function App() {
   // const [approval, setapproval] = useState(false);
   const [typedID, getTypedID] = useState("")
   const [redirect, setRedirect] = useState(false);
-  const [formState, setFormState] = useState({
-    Student_Name: "",
-    Company_Name: "",
-    Semester_And_Year: "",
-    Hours_Per_Week: "",
-    Proposed_Start: "",
-    Proposed_End: "",
-    Company_Address: "",
-    Employer_City: "",
-    Employer_State: "",
-    Employer_Zip: "",
-    Form_401: "",
-    Form_402: "",
-    Form_403: "",
-    Form_404: "",
-    Form_405: "",
-    Form_410: "",
-    Form_420: "",
-    Student_Will_Accomplish_1: "",
-    Student_Will_Accomplish_2: "",
-    Student_Will_Accomplish_3: "",
-    Supervisor_Rating_1: "",
-    Supervisor_Rating_2: "",
-    Supervisor_Rating_3: "",
-    id: "",
-  });
+  // const [formState, setFormState] = useState({
+  //   Student_Name: "",
+  //   Company_Name: "",
+  //   Semester_And_Year: "",
+  //   Hours_Per_Week: "",
+  //   Proposed_Start: "",
+  //   Proposed_End: "",
+  //   Company_Address: "",
+  //   Employer_City: "",
+  //   Employer_State: "",
+  //   Employer_Zip: "",
+  //   Form_401: "",
+  //   Form_402: "",
+  //   Form_403: "",
+  //   Form_404: "",
+  //   Form_405: "",
+  //   Form_410: "",
+  //   Form_420: "",
+  //   Student_Will_Accomplish_1: "",
+  //   Student_Will_Accomplish_2: "",
+  //   Student_Will_Accomplish_3: "",
+  //   Supervisor_Rating_1: "",
+  //   Supervisor_Rating_2: "",
+  //   Supervisor_Rating_3: "",
+  //   id: "",
+  // });
 
   useEffect(()=>{
     denyos();
@@ -104,6 +104,7 @@ function App() {
  }
 
  const handleSubmit = (event) => {
+   // eslint-disable-next-line
   const form = event.currentTarget;
   event.preventDefault();
   event.stopPropagation();

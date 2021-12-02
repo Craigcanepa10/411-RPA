@@ -9,7 +9,7 @@ import Fac from "./Contain/Facilty/Facilty"
 import Emp from "./Contain/Employer/Employer"
 import Stu from "./Contain/Student/Student"
 import formfin from "./Contain/Final Form/Form"
-import { Auth } from 'aws-amplify';
+// import { Auth } from 'aws-amplify';
 import './App.css';
 
 function App() {

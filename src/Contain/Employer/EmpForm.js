@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -9,8 +9,9 @@ import Navy from "../../Comp/Navbar/Navbar"
 import './Form.css';
 import logo from '../../Photo/SLU-shield.png';
 import * as emailjs from 'emailjs-com'
-import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
-import { InternForm } from '../../models';
+// import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify';
+import { Auth, API, graphqlOperation } from 'aws-amplify';
+// import { InternForm } from '../../models';
 import { createInternForm } from '../../graphql/mutations'
 import { getInternForm } from '../../graphql/queries'
 
@@ -20,47 +21,75 @@ function App() {
 
   const currpath = window.location.pathname;
   var ID = "";
-  const [validated, setValidated] = useState(false); //the validation stuff
+  // const [validated, setValidated] = useState(false); //the validation stuff
   const [validated2, setValidated2] = useState(false); //the validation stuff
   const [validated3, setValidated3] = useState(false); //the validation stuff
   const [name, getname] = useState("");
+  // eslint-disable-next-line
   const [wnum, getwnum] = useState("");
+  // eslint-disable-next-line
   const [email, getemail] = useState("");
+  // eslint-disable-next-line
   const [cellnum, getcellnum] = useState("");
+  // eslint-disable-next-line
   const [homenum, gethomenum] = useState("");
+  // eslint-disable-next-line
   const [worknum, getworknum] = useState("");
+  // eslint-disable-next-line
   const [presAdd, getpresAdd] = useState("");
+  // eslint-disable-next-line
   const [permAdd, getpermAdd] = useState("");
+  // eslint-disable-next-line
   const [degree, getdegree] = useState("");
+  // eslint-disable-next-line
   const [semHours, getsemHours] = useState("");
+  // eslint-disable-next-line
   const [majorGPA, getmajorGPA] = useState("");
+  // eslint-disable-next-line
   const [expGradDate, getexpGradDate] = useState("");
+  // eslint-disable-next-line
   const [comName, getcomName] = useState("");
+  // eslint-disable-next-line
   const [comAdd, getcomAdd] = useState("");
+  // eslint-disable-next-line
   const [supName, getsupName] = useState("");
+  // eslint-disable-next-line
   const [empStartDate, getempStartDate] = useState("");
+  // eslint-disable-next-line
   const [empEndDate, getempEndDate] = useState("");
+  // eslint-disable-next-line
   const [empStatus, getempStatus] = useState("");
+  // eslint-disable-next-line
   const [jobTitle, getjobTitle] = useState("");
+  // eslint-disable-next-line
   const [jobRes, getjobRes] = useState("");
+  // eslint-disable-next-line
   const [stuDigSig401, getstuDigSig401] = useState("");
+  // eslint-disable-next-line
   const [stuDigSigDate401, getstuDigSigDate401] = useState("");
+  // eslint-disable-next-line
   const [supemail, getsupemail] = useState("");
+  // eslint-disable-next-line
   const [supNum, getsupNum] = useState("");
   const [semnyear, getsemnyear] = useState("");
   const [hourswork, gethourswork] = useState("");
+  // eslint-disable-next-line
   const [stuDigSig402, getstuDigSig402] = useState("");
   const [stuDigSigDate402, getstuDigSigDate402] = useState("");
   const [goal1, getgoal1] = useState("");
+  // eslint-disable-next-line
   const [suprate1, getsuprate1] = useState("");
   const [goal2, getgoal2] = useState("");
+  // eslint-disable-next-line
   const [suprate2, getsuprate2] = useState("");
   const [goal3, getgoal3] = useState("");
+  // eslint-disable-next-line
   const [suprate3, getsuprate3] = useState("");
   const [stuDigSigDate403, getstuDigSigDate403] = useState("");
   const [id, getid] = useState("");
-  const [redirect, setRedirect] = useState(false);
+  // const [redirect, setRedirect] = useState(false);
   const [forms, setForms] = useState([]);
+  // eslint-disable-next-line
   const [formState, setFormState] = useState({Student_Name: '', W_Num: '', Student_Cell_Num: '', Student_Home_Phone: '', Student_Email: '', Student_Work_Number: '', Student_Present_Address: '', Student_Permanent_Address: "", Degree: "", Semester_Hours_Earned: "", Major_GPA: "", Expected_Grad_Date: "", Company_Name: "", Company_Address: "", Name_and_Title_Immediate_Supervisor: "", Supervisor_Email: "", Supervisor_Phone: "", Proposed_Start: "", Proposed_End: "", Employed_Full: "", Job_Title: "", Job_Responsibilities: "", Student_Signature_Form_401: false, Student_Signature_Date_Form_401: "", Date_Rec_Dep: "", Action_Taken: "", Reason: "", Faculty_Signature_Form_401: false, Faculty_Signature_Date_Form_401: "", Dep_Head_Signature_Form_401: false, Dep_Head_Signature_Date_Form_401: "", Dean_Signature_Form_401: false, Dean_Signature_Date_Form_401: "", Semester_And_Year: "", Hours_Per_Week: "", Employer_Signature_Form_402: false, Employer_City: "", Employer_State: "", Employer_Zip: 0, Student_Signature_Form_402: false, Student_Signature_Date_Form_402: "", Student_Will_Accomplish_1: "", Supervisor_Rating_1: "", Student_Will_Accomplish_2: "", Supervisor_Rating_2: "", Student_Will_Accomplish_3: "", Supervisor_Rating_3: "", Student_Signature_Form_403: false, Student_Signature_Date_Form_403: "", Employer_Signature_Form_403: false, Employer_Signature_Date_Form_403: "", Intern_Cord_Signature_Form_403: false, Intern_Cord_Signature_Date_Form_403: "", Total_Hours_For_Semester: "", Total_Wages_For_Deduction: 1.5, Month_1: "", Month_1_Week_1: "", Month_1_Week_1_Sun: 1.5, Month_1_Week_1_Mon: 1.5, Month_1_Week_1_Tue: 1.5, Month_1_Week_1_Wed: 1.5, Month_1_Week_1_Thu: 1.5, Month_1_Week_1_Fri: 1.5, Month_1_Week_1_Sat: 1.5, Month_1_Week_1_Total_Hours: 1.5, Month_1_Week_1_Weekly_Wages: 1.5, Month_1_Week_2: "", Month_1_Week_2_Sun: 1.5, Month_1_Week_2_Mon: 1.5, Month_1_Week_2_Tue: 1.5, Month_1_Week_2_Wed: 1.5, Month_1_Week_2_Thu: 1.5, Month_1_Week_2_Fri: 1.5, Month_1_Week_2_Sat: 1.5, Month_1_Week_2_Total_Hours: 1.5, Month_1_Week_2_Weekly_Wages: 1.5, Month_1_Week_3: "", Month_1_Week_3_Sun: 1.5, Month_1_Week_3_Mon: 1.5, Month_1_Week_3_Tue: 1.5, Month_1_Week_3_Wed: 1.5, Month_1_Week_3_Thu: 1.5, Month_1_Week_3_Fri: 1.5, Month_1_Week_3_Sat: 1.5, Month_1_Week_3_Total_Hours: 1.5, Month_1_Week_3_Weekly_Wages: 1.5, Month_1_Week_4: "", Month_1_Week_4_Sun: 1.5, Month_1_Week_4_Mon: 1.5, Month_1_Week_4_Tue: 1.5, Month_1_Week_4_Wed: 1.5, Month_1_Week_4_Thu: 1.5, Month_1_Week_4_Fri: 1.5, Month_1_Week_4_Sat: 1.5, Month_1_Week_4_Total_Hours: 1.5, Month_1_Week_4_Weekly_Wages: 1.5, Month_1_Total_Sun: 1.5, Month_1_Total_Mon: 1.5, Month_1_Total_Tue: 1.5, Month_1_Total_Wed: 1.5, Month_1_Total_Thu: 1.5, Month_1_Total_Fri: 1.5, Month_1_Total_Sat: 1.5, Month_1_Total_Hours: 1.5, Month_1_Total_Weekly_Wages: 1.5, Month_2: "", Month_2_Week_1: "", Month_2_Week_1_Sun: 1.5, Month_2_Week_1_Mon: 1.5, Month_2_Week_1_Tue: 1.5, Month_2_Week_1_Wed: 1.5, Month_2_Week_1_Thu: 1.5, Month_2_Week_1_Fri: 1.5, Month_2_Week_1_Sat: 1.5, Month_2_Week_1_Total_Hours: 1.5, Month_2_Week_1_Weekly_Wages: 1.5, Month_2_Week_2: "", Month_2_Week_2_Sun: 1.5, Month_2_Week_2_Mon: 1.5, Month_2_Week_2_Tue: 1.5, Month_2_Week_2_Wed: 1.5, Month_2_Week_2_Thu: 1.5, Month_2_Week_2_Fri: 1.5, Month_2_Week_2_Sat: 1.5, Month_2_Week_2_Total_Hours: 1.5, Month_2_Week_2_Weekly_Wages: 1.5, Month_2_Week_3: "", Month_2_Week_3_Sun: 1.5, Month_2_Week_3_Mon: 1.5, Month_2_Week_3_Tue: 1.5, Month_2_Week_3_Wed: 1.5, Month_2_Week_3_Thu: 1.5, Month_2_Week_3_Fri: 1.5, Month_2_Week_3_Sat: 1.5, Month_2_Week_3_Total_Hours: 1.5, Month_2_Week_3_Weekly_Wages: 1.5, Month_2_Week_4: "", Month_2_Week_4_Sun: 1.5, Month_2_Week_4_Mon: 1.5, Month_2_Week_4_Tue: 1.5, Month_2_Week_4_Wed: 1.5, Month_2_Week_4_Thu: 1.5, Month_2_Week_4_Fri: 1.5, Month_2_Week_4_Sat: 1.5, Month_2_Week_4_Total_Hours: 1.5, Month_2_Week_4_Weekly_Wages: 1.5, Month_2_Total_Sun: 1.5, Month_2_Total_Mon: 1.5, Month_2_Total_Tue: 1.5, Month_2_Total_Wed: 1.5, Month_2_Total_Thu: 1.5, Month_2_Total_Fri: 1.5, Month_2_Total_Sat: 1.5, Month_2_Total_Hours: 1.5, Month_2_Total_Weekly_Wages: 1.5, Month_3: "", Month_3_Week_1: "", Month_3_Week_1_Sun: 1.5, Month_3_Week_1_Mon: 1.5, Month_3_Week_1_Tue: 1.5, Month_3_Week_1_Wed: 1.5, Month_3_Week_1_Thu: 1.5, Month_3_Week_1_Fri: 1.5, Month_3_Week_1_Sat: 1.5, Month_3_Week_1_Total_Hours: 1.5, Month_3_Week_1_Weekly_Wages: 1.5, Month_3_Week_2: "", Month_3_Week_2_Sun: 1.5, Month_3_Week_2_Mon: 1.5, Month_3_Week_2_Tue: 1.5, Month_3_Week_2_Wed: 1.5, Month_3_Week_2_Thu: 1.5, Month_3_Week_2_Fri: 1.5, Month_3_Week_2_Sat: 1.5, Month_3_Week_2_Total_Hours: 1.5, Month_3_Week_2_Weekly_Wages: 1.5, Month_3_Week_3: "", Month_3_Week_3_Sun: 1.5, Month_3_Week_3_Mon: 1.5, Month_3_Week_3_Tue: 1.5, Month_3_Week_3_Wed: 1.5, Month_3_Week_3_Thu: 1.5, Month_3_Week_3_Fri: 1.5, Month_3_Week_3_Sat: 1.5, Month_3_Week_3_Total_Hours: 1.5, Month_3_Week_3_Weekly_Wages: 1.5, Month_3_Week_4: "", Month_3_Week_4_Sun: 1.5, Month_3_Week_4_Mon: 1.5, Month_3_Week_4_Tue: 1.5, Month_3_Week_4_Wed: 1.5, Month_3_Week_4_Thu: 1.5, Month_3_Week_4_Fri: 1.5, Month_3_Week_4_Sat: 1.5, Month_3_Week_4_Total_Hours: 1.5, Month_3_Week_4_Weekly_Wages: 1.5, Month_3_Total_Sun: 1.5, Month_3_Total_Mon: 1.5, Month_3_Total_Tue: 1.5, Month_3_Total_Wed: 1.5, Month_3_Total_Thu: 1.5, Month_3_Total_Fri: 1.5, Month_3_Total_Sat: 1.5, Month_3_Total_Hours: 1.5, Month_3_Total_Weekly_Wages: 1.5, Month_4: "", Month_4_Week_1: "", Month_4_Week_1_Sun: 1.5, Month_4_Week_1_Mon: 1.5, Month_4_Week_1_Tue: 1.5, Month_4_Week_1_Wed: 1.5, Month_4_Week_1_Thu: 1.5, Month_4_Week_1_Fri: 1.5, Month_4_Week_1_Sat: 1.5, Month_4_Week_1_Total_Hours: 1.5, Month_4_Week_1_Weekly_Wages: 1.5, Month_4_Week_2: "", Month_4_Week_2_Sun: 1.5, Month_4_Week_2_Mon: 1.5, Month_4_Week_2_Tue: 1.5, Month_4_Week_2_Wed: 1.5, Month_4_Week_2_Thu: 1.5, Month_4_Week_2_Fri: 1.5, Month_4_Week_2_Sat: 1.5, Month_4_Week_2_Total_Hours: 1.5, Month_4_Week_2_Weekly_Wages: 1.5, Month_4_Week_3: "", Month_4_Week_3_Sun: 1.5, Month_4_Week_3_Mon: 1.5, Month_4_Week_3_Tue: 1.5, Month_4_Week_3_Wed: 1.5, Month_4_Week_3_Thu: 1.5, Month_4_Week_3_Fri: 1.5, Month_4_Week_3_Sat: 1.5, Month_4_Week_3_Total_Hours: 1.5, Month_4_Week_3_Weekly_Wages: 1.5, Month_4_Week_4: "", Month_4_Week_4_Sun: 1.5, Month_4_Week_4_Mon: 1.5, Month_4_Week_4_Tue: 1.5, Month_4_Week_4_Wed: 1.5, Month_4_Week_4_Thu: 1.5, Month_4_Week_4_Fri: 1.5, Month_4_Week_4_Sat: 1.5, Month_4_Week_4_Total_Hours: 1.5, Month_4_Week_4_Weekly_Wages: 1.5, Month_4_Total_Sun: 1.5, Month_4_Total_Mon: 1.5, Month_4_Total_Tue: 1.5, Month_4_Total_Wed: 1.5, Month_4_Total_Thu: 1.5, Month_4_Total_Fri: 1.5, Month_4_Total_Sat: 1.5, Month_4_Total_Hours: 1.5, Month_4_Total_Weekly_Wages: 1.5, Student_Signature_Form_404: false, Student_Signature_Date_Form_404: "", Supervisor_Signature_Form_404: false, Supervisor_Signature_Date_Form_404: "", Date_Form_420: "", Relations_With_Others: "", Attitude_Application_To_Work: "", Judgement: "", Dependability: "", Ability_To_Learn: "", Quality_Of_Work: "", Overall_Performance: "", Attendance: "", Punctuality: "", Remarks: "", Report_Discussed_With_Student: "", Student_Signature_Form_420: false, Student_Signature_Date_Form_420: "", Supervisor_Signature_Form_420: false, Supervisor_Signature_Date_Form_420: "", Supervisor_Name: "", Rating_Of_Employer: "", Rating_Of_Work_Exp: "", Relation_To_CMPS_Studies: "", Rating_Of_Learning_Of_Internship: "", Would_You_Repeat: "", Would_You_Repeat_Explain: "", Would_You_Recommend: "", Would_You_Recommend_Explain: "", Additional_Content_For_Curriculum: "", Any_Additional_Comments: "", Student_Signature_Form_405: false, Student_Signature_Date_Form_405: "", Week_1: "", Week_1_Activities: "", Week_1_Hours: 1.5, Week_2: "", Week_2_Activities: "", Week_2_Hours: 1.5, Week_3: "", Week_3_Activities: "", Week_3_Hours: 1.5, Week_4: "", Week_4_Activities: "", Week_4_Hours: 1.5, Week_5: "", Week_5_Activities: "", Week_5_Hours: 1.5, Week_6: "", Week_6_Activities: "", Week_6_Hours: 1.5, Week_7: "", Week_7_Activities: "", Week_7_Hours: 1.5, Total_Hours: 1.5, Form_401: "", Form_402: "", Form_403: "", Form_404: "", Form_405: "", Form_420: "", Form_410: "", sup_sig_date_form_402: "", compl_sup_sig_form_403: false, compl_sup_sig_date_form_403: ""});
   
 
