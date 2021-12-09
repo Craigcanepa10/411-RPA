@@ -279,7 +279,7 @@ export const schema = {
                 "Employer_Zip": {
                     "name": "Employer_Zip",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -391,7 +391,7 @@ export const schema = {
                 "Total_Wages_For_Deduction": {
                     "name": "Total_Wages_For_Deduction",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -412,63 +412,63 @@ export const schema = {
                 "Month_1_Week_1_Sun": {
                     "name": "Month_1_Week_1_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Mon": {
                     "name": "Month_1_Week_1_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Tue": {
                     "name": "Month_1_Week_1_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Wed": {
                     "name": "Month_1_Week_1_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Thu": {
                     "name": "Month_1_Week_1_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Fri": {
                     "name": "Month_1_Week_1_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Sat": {
                     "name": "Month_1_Week_1_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Total_Hours": {
                     "name": "Month_1_Week_1_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_1_Weekly_Wages": {
                     "name": "Month_1_Week_1_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -482,63 +482,63 @@ export const schema = {
                 "Month_1_Week_2_Sun": {
                     "name": "Month_1_Week_2_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Mon": {
                     "name": "Month_1_Week_2_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Tue": {
                     "name": "Month_1_Week_2_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Wed": {
                     "name": "Month_1_Week_2_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Thu": {
                     "name": "Month_1_Week_2_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Fri": {
                     "name": "Month_1_Week_2_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Sat": {
                     "name": "Month_1_Week_2_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Total_Hours": {
                     "name": "Month_1_Week_2_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_2_Weekly_Wages": {
                     "name": "Month_1_Week_2_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -552,63 +552,63 @@ export const schema = {
                 "Month_1_Week_3_Sun": {
                     "name": "Month_1_Week_3_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Mon": {
                     "name": "Month_1_Week_3_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Tue": {
                     "name": "Month_1_Week_3_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Wed": {
                     "name": "Month_1_Week_3_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Thu": {
                     "name": "Month_1_Week_3_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Fri": {
                     "name": "Month_1_Week_3_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Sat": {
                     "name": "Month_1_Week_3_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Total_Hours": {
                     "name": "Month_1_Week_3_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_3_Weekly_Wages": {
                     "name": "Month_1_Week_3_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -622,126 +622,126 @@ export const schema = {
                 "Month_1_Week_4_Sun": {
                     "name": "Month_1_Week_4_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Mon": {
                     "name": "Month_1_Week_4_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Tue": {
                     "name": "Month_1_Week_4_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Wed": {
                     "name": "Month_1_Week_4_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Thu": {
                     "name": "Month_1_Week_4_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Fri": {
                     "name": "Month_1_Week_4_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Sat": {
                     "name": "Month_1_Week_4_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Total_Hours": {
                     "name": "Month_1_Week_4_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Week_4_Weekly_Wages": {
                     "name": "Month_1_Week_4_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Sun": {
                     "name": "Month_1_Total_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Mon": {
                     "name": "Month_1_Total_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Tue": {
                     "name": "Month_1_Total_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Wed": {
                     "name": "Month_1_Total_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Thu": {
                     "name": "Month_1_Total_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Fri": {
                     "name": "Month_1_Total_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Sat": {
                     "name": "Month_1_Total_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Hours": {
                     "name": "Month_1_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_1_Total_Weekly_Wages": {
                     "name": "Month_1_Total_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -762,63 +762,63 @@ export const schema = {
                 "Month_2_Week_1_Sun": {
                     "name": "Month_2_Week_1_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Mon": {
                     "name": "Month_2_Week_1_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Tue": {
                     "name": "Month_2_Week_1_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Wed": {
                     "name": "Month_2_Week_1_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Thu": {
                     "name": "Month_2_Week_1_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Fri": {
                     "name": "Month_2_Week_1_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Sat": {
                     "name": "Month_2_Week_1_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Total_Hours": {
                     "name": "Month_2_Week_1_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_1_Weekly_Wages": {
                     "name": "Month_2_Week_1_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -832,63 +832,63 @@ export const schema = {
                 "Month_2_Week_2_Sun": {
                     "name": "Month_2_Week_2_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Mon": {
                     "name": "Month_2_Week_2_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Tue": {
                     "name": "Month_2_Week_2_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Wed": {
                     "name": "Month_2_Week_2_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Thu": {
                     "name": "Month_2_Week_2_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Fri": {
                     "name": "Month_2_Week_2_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Sat": {
                     "name": "Month_2_Week_2_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Total_Hours": {
                     "name": "Month_2_Week_2_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_2_Weekly_Wages": {
                     "name": "Month_2_Week_2_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -902,63 +902,63 @@ export const schema = {
                 "Month_2_Week_3_Sun": {
                     "name": "Month_2_Week_3_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Mon": {
                     "name": "Month_2_Week_3_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Tue": {
                     "name": "Month_2_Week_3_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Wed": {
                     "name": "Month_2_Week_3_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Thu": {
                     "name": "Month_2_Week_3_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Fri": {
                     "name": "Month_2_Week_3_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Sat": {
                     "name": "Month_2_Week_3_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Total_Hours": {
                     "name": "Month_2_Week_3_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_3_Weekly_Wages": {
                     "name": "Month_2_Week_3_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -972,126 +972,126 @@ export const schema = {
                 "Month_2_Week_4_Sun": {
                     "name": "Month_2_Week_4_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Mon": {
                     "name": "Month_2_Week_4_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Tue": {
                     "name": "Month_2_Week_4_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Wed": {
                     "name": "Month_2_Week_4_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Thu": {
                     "name": "Month_2_Week_4_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Fri": {
                     "name": "Month_2_Week_4_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Sat": {
                     "name": "Month_2_Week_4_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Total_Hours": {
                     "name": "Month_2_Week_4_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Week_4_Weekly_Wages": {
                     "name": "Month_2_Week_4_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Sun": {
                     "name": "Month_2_Total_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Mon": {
                     "name": "Month_2_Total_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Tue": {
                     "name": "Month_2_Total_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Wed": {
                     "name": "Month_2_Total_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Thu": {
                     "name": "Month_2_Total_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Fri": {
                     "name": "Month_2_Total_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Sat": {
                     "name": "Month_2_Total_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Hours": {
                     "name": "Month_2_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_2_Total_Weekly_Wages": {
                     "name": "Month_2_Total_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1112,63 +1112,63 @@ export const schema = {
                 "Month_3_Week_1_Sun": {
                     "name": "Month_3_Week_1_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Mon": {
                     "name": "Month_3_Week_1_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Tue": {
                     "name": "Month_3_Week_1_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Wed": {
                     "name": "Month_3_Week_1_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Thu": {
                     "name": "Month_3_Week_1_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Fri": {
                     "name": "Month_3_Week_1_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Sat": {
                     "name": "Month_3_Week_1_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Total_Hours": {
                     "name": "Month_3_Week_1_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_1_Weekly_Wages": {
                     "name": "Month_3_Week_1_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1182,63 +1182,63 @@ export const schema = {
                 "Month_3_Week_2_Sun": {
                     "name": "Month_3_Week_2_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Mon": {
                     "name": "Month_3_Week_2_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Tue": {
                     "name": "Month_3_Week_2_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Wed": {
                     "name": "Month_3_Week_2_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Thu": {
                     "name": "Month_3_Week_2_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Fri": {
                     "name": "Month_3_Week_2_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Sat": {
                     "name": "Month_3_Week_2_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Total_Hours": {
                     "name": "Month_3_Week_2_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_2_Weekly_Wages": {
                     "name": "Month_3_Week_2_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1252,63 +1252,63 @@ export const schema = {
                 "Month_3_Week_3_Sun": {
                     "name": "Month_3_Week_3_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Mon": {
                     "name": "Month_3_Week_3_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Tue": {
                     "name": "Month_3_Week_3_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Wed": {
                     "name": "Month_3_Week_3_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Thu": {
                     "name": "Month_3_Week_3_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Fri": {
                     "name": "Month_3_Week_3_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Sat": {
                     "name": "Month_3_Week_3_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Total_Hours": {
                     "name": "Month_3_Week_3_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_3_Weekly_Wages": {
                     "name": "Month_3_Week_3_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1322,126 +1322,126 @@ export const schema = {
                 "Month_3_Week_4_Sun": {
                     "name": "Month_3_Week_4_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Mon": {
                     "name": "Month_3_Week_4_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Tue": {
                     "name": "Month_3_Week_4_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Wed": {
                     "name": "Month_3_Week_4_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Thu": {
                     "name": "Month_3_Week_4_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Fri": {
                     "name": "Month_3_Week_4_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Sat": {
                     "name": "Month_3_Week_4_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Total_Hours": {
                     "name": "Month_3_Week_4_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Week_4_Weekly_Wages": {
                     "name": "Month_3_Week_4_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Sun": {
                     "name": "Month_3_Total_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Mon": {
                     "name": "Month_3_Total_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Tue": {
                     "name": "Month_3_Total_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Wed": {
                     "name": "Month_3_Total_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Thu": {
                     "name": "Month_3_Total_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Fri": {
                     "name": "Month_3_Total_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Sat": {
                     "name": "Month_3_Total_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Hours": {
                     "name": "Month_3_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_3_Total_Weekly_Wages": {
                     "name": "Month_3_Total_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1462,63 +1462,63 @@ export const schema = {
                 "Month_4_Week_1_Sun": {
                     "name": "Month_4_Week_1_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Mon": {
                     "name": "Month_4_Week_1_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Tue": {
                     "name": "Month_4_Week_1_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Wed": {
                     "name": "Month_4_Week_1_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Thu": {
                     "name": "Month_4_Week_1_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Fri": {
                     "name": "Month_4_Week_1_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Sat": {
                     "name": "Month_4_Week_1_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Total_Hours": {
                     "name": "Month_4_Week_1_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_1_Weekly_Wages": {
                     "name": "Month_4_Week_1_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1532,63 +1532,63 @@ export const schema = {
                 "Month_4_Week_2_Sun": {
                     "name": "Month_4_Week_2_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Mon": {
                     "name": "Month_4_Week_2_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Tue": {
                     "name": "Month_4_Week_2_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Wed": {
                     "name": "Month_4_Week_2_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Thu": {
                     "name": "Month_4_Week_2_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Fri": {
                     "name": "Month_4_Week_2_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Sat": {
                     "name": "Month_4_Week_2_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Total_Hours": {
                     "name": "Month_4_Week_2_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_2_Weekly_Wages": {
                     "name": "Month_4_Week_2_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1602,63 +1602,63 @@ export const schema = {
                 "Month_4_Week_3_Sun": {
                     "name": "Month_4_Week_3_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Mon": {
                     "name": "Month_4_Week_3_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Tue": {
                     "name": "Month_4_Week_3_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Wed": {
                     "name": "Month_4_Week_3_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Thu": {
                     "name": "Month_4_Week_3_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Fri": {
                     "name": "Month_4_Week_3_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Sat": {
                     "name": "Month_4_Week_3_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Total_Hours": {
                     "name": "Month_4_Week_3_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_3_Weekly_Wages": {
                     "name": "Month_4_Week_3_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -1672,126 +1672,126 @@ export const schema = {
                 "Month_4_Week_4_Sun": {
                     "name": "Month_4_Week_4_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Mon": {
                     "name": "Month_4_Week_4_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Tue": {
                     "name": "Month_4_Week_4_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Wed": {
                     "name": "Month_4_Week_4_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Thu": {
                     "name": "Month_4_Week_4_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Fri": {
                     "name": "Month_4_Week_4_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Sat": {
                     "name": "Month_4_Week_4_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Total_Hours": {
                     "name": "Month_4_Week_4_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Week_4_Weekly_Wages": {
                     "name": "Month_4_Week_4_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Sun": {
                     "name": "Month_4_Total_Sun",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Mon": {
                     "name": "Month_4_Total_Mon",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Tue": {
                     "name": "Month_4_Total_Tue",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Wed": {
                     "name": "Month_4_Total_Wed",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Thu": {
                     "name": "Month_4_Total_Thu",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Fri": {
                     "name": "Month_4_Total_Fri",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Sat": {
                     "name": "Month_4_Total_Sat",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Hours": {
                     "name": "Month_4_Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Month_4_Total_Weekly_Wages": {
                     "name": "Month_4_Total_Weekly_Wages",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2043,7 +2043,7 @@ export const schema = {
                 "Week_1_Hours": {
                     "name": "Week_1_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2064,7 +2064,7 @@ export const schema = {
                 "Week_2_Hours": {
                     "name": "Week_2_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2085,7 +2085,7 @@ export const schema = {
                 "Week_3_Hours": {
                     "name": "Week_3_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2106,7 +2106,7 @@ export const schema = {
                 "Week_4_Hours": {
                     "name": "Week_4_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2127,7 +2127,7 @@ export const schema = {
                 "Week_5_Hours": {
                     "name": "Week_5_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2148,7 +2148,7 @@ export const schema = {
                 "Week_6_Hours": {
                     "name": "Week_6_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2169,14 +2169,14 @@ export const schema = {
                 "Week_7_Hours": {
                     "name": "Week_7_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
                 "Total_Hours": {
                     "name": "Total_Hours",
                     "isArray": false,
-                    "type": "Float",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -2307,5 +2307,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "624a966853bcbcd002342feea9a72cd7"
+    "version": "edf323752dd629f197c0e07eca72643f"
 };

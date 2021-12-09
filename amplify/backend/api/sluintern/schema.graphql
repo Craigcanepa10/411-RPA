@@ -38,7 +38,7 @@ type InternForm @model @auth(rules: [{allow: public, operations: [read, update, 
   Employer_Signature_Form_402: Boolean
   Employer_City: String
   Employer_State: String
-  Employer_Zip: Int
+  Employer_Zip: String
   Student_Signature_Form_402: Boolean
   Student_Signature_Date_Form_402: AWSDate
   Student_Will_Accomplish_1: String
@@ -54,207 +54,207 @@ type InternForm @model @auth(rules: [{allow: public, operations: [read, update, 
   Intern_Cord_Signature_Form_403: Boolean
   Intern_Cord_Signature_Date_Form_403: AWSDate
   Total_Hours_For_Semester: String
-  Total_Wages_For_Deduction: Float
+  Total_Wages_For_Deduction: String
   Month_1: String
   Month_1_Week_1: String
-  Month_1_Week_1_Sun: Float
-  Month_1_Week_1_Mon: Float
-  Month_1_Week_1_Tue: Float
-  Month_1_Week_1_Wed: Float
-  Month_1_Week_1_Thu: Float
-  Month_1_Week_1_Fri: Float
-  Month_1_Week_1_Sat: Float
-  Month_1_Week_1_Total_Hours: Float
-  Month_1_Week_1_Weekly_Wages: Float
+  Month_1_Week_1_Sun: String
+  Month_1_Week_1_Mon: String
+  Month_1_Week_1_Tue: String
+  Month_1_Week_1_Wed: String
+  Month_1_Week_1_Thu: String
+  Month_1_Week_1_Fri: String
+  Month_1_Week_1_Sat: String
+  Month_1_Week_1_Total_Hours: String
+  Month_1_Week_1_Weekly_Wages: String
   Month_1_Week_2: String
-  Month_1_Week_2_Sun: Float
-  Month_1_Week_2_Mon: Float
-  Month_1_Week_2_Tue: Float
-  Month_1_Week_2_Wed: Float
-  Month_1_Week_2_Thu: Float
-  Month_1_Week_2_Fri: Float
-  Month_1_Week_2_Sat: Float
-  Month_1_Week_2_Total_Hours: Float
-  Month_1_Week_2_Weekly_Wages: Float
+  Month_1_Week_2_Sun: String
+  Month_1_Week_2_Mon: String
+  Month_1_Week_2_Tue: String
+  Month_1_Week_2_Wed: String
+  Month_1_Week_2_Thu: String
+  Month_1_Week_2_Fri: String
+  Month_1_Week_2_Sat: String
+  Month_1_Week_2_Total_Hours: String
+  Month_1_Week_2_Weekly_Wages: String
   Month_1_Week_3: String
-  Month_1_Week_3_Sun: Float
-  Month_1_Week_3_Mon: Float
-  Month_1_Week_3_Tue: Float
-  Month_1_Week_3_Wed: Float
-  Month_1_Week_3_Thu: Float
-  Month_1_Week_3_Fri: Float
-  Month_1_Week_3_Sat: Float
-  Month_1_Week_3_Total_Hours: Float
-  Month_1_Week_3_Weekly_Wages: Float
+  Month_1_Week_3_Sun: String
+  Month_1_Week_3_Mon: String
+  Month_1_Week_3_Tue: String
+  Month_1_Week_3_Wed: String
+  Month_1_Week_3_Thu: String
+  Month_1_Week_3_Fri: String
+  Month_1_Week_3_Sat: String
+  Month_1_Week_3_Total_Hours: String
+  Month_1_Week_3_Weekly_Wages: String
   Month_1_Week_4: String
-  Month_1_Week_4_Sun: Float
-  Month_1_Week_4_Mon: Float
-  Month_1_Week_4_Tue: Float
-  Month_1_Week_4_Wed: Float
-  Month_1_Week_4_Thu: Float
-  Month_1_Week_4_Fri: Float
-  Month_1_Week_4_Sat: Float
-  Month_1_Week_4_Total_Hours: Float
-  Month_1_Week_4_Weekly_Wages: Float
-  Month_1_Total_Sun: Float
-  Month_1_Total_Mon: Float
-  Month_1_Total_Tue: Float
-  Month_1_Total_Wed: Float
-  Month_1_Total_Thu: Float
-  Month_1_Total_Fri: Float
-  Month_1_Total_Sat: Float
-  Month_1_Total_Hours: Float
-  Month_1_Total_Weekly_Wages: Float
+  Month_1_Week_4_Sun: String
+  Month_1_Week_4_Mon: String
+  Month_1_Week_4_Tue: String
+  Month_1_Week_4_Wed: String
+  Month_1_Week_4_Thu: String
+  Month_1_Week_4_Fri: String
+  Month_1_Week_4_Sat: String
+  Month_1_Week_4_Total_Hours: String
+  Month_1_Week_4_Weekly_Wages: String
+  Month_1_Total_Sun: String
+  Month_1_Total_Mon: String
+  Month_1_Total_Tue: String
+  Month_1_Total_Wed: String
+  Month_1_Total_Thu: String
+  Month_1_Total_Fri: String
+  Month_1_Total_Sat: String
+  Month_1_Total_Hours: String
+  Month_1_Total_Weekly_Wages: String
   Month_2: String
   Month_2_Week_1: String
-  Month_2_Week_1_Sun: Float
-  Month_2_Week_1_Mon: Float
-  Month_2_Week_1_Tue: Float
-  Month_2_Week_1_Wed: Float
-  Month_2_Week_1_Thu: Float
-  Month_2_Week_1_Fri: Float
-  Month_2_Week_1_Sat: Float
-  Month_2_Week_1_Total_Hours: Float
-  Month_2_Week_1_Weekly_Wages: Float
+  Month_2_Week_1_Sun: String
+  Month_2_Week_1_Mon: String
+  Month_2_Week_1_Tue: String
+  Month_2_Week_1_Wed: String
+  Month_2_Week_1_Thu: String
+  Month_2_Week_1_Fri: String
+  Month_2_Week_1_Sat: String
+  Month_2_Week_1_Total_Hours: String
+  Month_2_Week_1_Weekly_Wages: String
   Month_2_Week_2: String
-  Month_2_Week_2_Sun: Float
-  Month_2_Week_2_Mon: Float
-  Month_2_Week_2_Tue: Float
-  Month_2_Week_2_Wed: Float
-  Month_2_Week_2_Thu: Float
-  Month_2_Week_2_Fri: Float
-  Month_2_Week_2_Sat: Float
-  Month_2_Week_2_Total_Hours: Float
-  Month_2_Week_2_Weekly_Wages: Float
+  Month_2_Week_2_Sun: String
+  Month_2_Week_2_Mon: String
+  Month_2_Week_2_Tue: String
+  Month_2_Week_2_Wed: String
+  Month_2_Week_2_Thu: String
+  Month_2_Week_2_Fri: String
+  Month_2_Week_2_Sat: String
+  Month_2_Week_2_Total_Hours: String
+  Month_2_Week_2_Weekly_Wages: String
   Month_2_Week_3: String
-  Month_2_Week_3_Sun: Float
-  Month_2_Week_3_Mon: Float
-  Month_2_Week_3_Tue: Float
-  Month_2_Week_3_Wed: Float
-  Month_2_Week_3_Thu: Float
-  Month_2_Week_3_Fri: Float
-  Month_2_Week_3_Sat: Float
-  Month_2_Week_3_Total_Hours: Float
-  Month_2_Week_3_Weekly_Wages: Float
+  Month_2_Week_3_Sun: String
+  Month_2_Week_3_Mon: String
+  Month_2_Week_3_Tue: String
+  Month_2_Week_3_Wed: String
+  Month_2_Week_3_Thu: String
+  Month_2_Week_3_Fri: String
+  Month_2_Week_3_Sat: String
+  Month_2_Week_3_Total_Hours: String
+  Month_2_Week_3_Weekly_Wages: String
   Month_2_Week_4: String
-  Month_2_Week_4_Sun: Float
-  Month_2_Week_4_Mon: Float
-  Month_2_Week_4_Tue: Float
-  Month_2_Week_4_Wed: Float
-  Month_2_Week_4_Thu: Float
-  Month_2_Week_4_Fri: Float
-  Month_2_Week_4_Sat: Float
-  Month_2_Week_4_Total_Hours: Float
-  Month_2_Week_4_Weekly_Wages: Float
-  Month_2_Total_Sun: Float
-  Month_2_Total_Mon: Float
-  Month_2_Total_Tue: Float
-  Month_2_Total_Wed: Float
-  Month_2_Total_Thu: Float
-  Month_2_Total_Fri: Float
-  Month_2_Total_Sat: Float
-  Month_2_Total_Hours: Float
-  Month_2_Total_Weekly_Wages: Float
+  Month_2_Week_4_Sun: String
+  Month_2_Week_4_Mon: String
+  Month_2_Week_4_Tue: String
+  Month_2_Week_4_Wed: String
+  Month_2_Week_4_Thu: String
+  Month_2_Week_4_Fri: String
+  Month_2_Week_4_Sat: String
+  Month_2_Week_4_Total_Hours: String
+  Month_2_Week_4_Weekly_Wages: String
+  Month_2_Total_Sun: String
+  Month_2_Total_Mon: String
+  Month_2_Total_Tue: String
+  Month_2_Total_Wed: String
+  Month_2_Total_Thu: String
+  Month_2_Total_Fri: String
+  Month_2_Total_Sat: String
+  Month_2_Total_Hours: String
+  Month_2_Total_Weekly_Wages: String
   Month_3: String
   Month_3_Week_1: String
-  Month_3_Week_1_Sun: Float
-  Month_3_Week_1_Mon: Float
-  Month_3_Week_1_Tue: Float
-  Month_3_Week_1_Wed: Float
-  Month_3_Week_1_Thu: Float
-  Month_3_Week_1_Fri: Float
-  Month_3_Week_1_Sat: Float
-  Month_3_Week_1_Total_Hours: Float
-  Month_3_Week_1_Weekly_Wages: Float
+  Month_3_Week_1_Sun: String
+  Month_3_Week_1_Mon: String
+  Month_3_Week_1_Tue: String
+  Month_3_Week_1_Wed: String
+  Month_3_Week_1_Thu: String
+  Month_3_Week_1_Fri: String
+  Month_3_Week_1_Sat: String
+  Month_3_Week_1_Total_Hours: String
+  Month_3_Week_1_Weekly_Wages: String
   Month_3_Week_2: String
-  Month_3_Week_2_Sun: Float
-  Month_3_Week_2_Mon: Float
-  Month_3_Week_2_Tue: Float
-  Month_3_Week_2_Wed: Float
-  Month_3_Week_2_Thu: Float
-  Month_3_Week_2_Fri: Float
-  Month_3_Week_2_Sat: Float
-  Month_3_Week_2_Total_Hours: Float
-  Month_3_Week_2_Weekly_Wages: Float
+  Month_3_Week_2_Sun: String
+  Month_3_Week_2_Mon: String
+  Month_3_Week_2_Tue: String
+  Month_3_Week_2_Wed: String
+  Month_3_Week_2_Thu: String
+  Month_3_Week_2_Fri: String
+  Month_3_Week_2_Sat: String
+  Month_3_Week_2_Total_Hours: String
+  Month_3_Week_2_Weekly_Wages: String
   Month_3_Week_3: String
-  Month_3_Week_3_Sun: Float
-  Month_3_Week_3_Mon: Float
-  Month_3_Week_3_Tue: Float
-  Month_3_Week_3_Wed: Float
-  Month_3_Week_3_Thu: Float
-  Month_3_Week_3_Fri: Float
-  Month_3_Week_3_Sat: Float
-  Month_3_Week_3_Total_Hours: Float
-  Month_3_Week_3_Weekly_Wages: Float
+  Month_3_Week_3_Sun: String
+  Month_3_Week_3_Mon: String
+  Month_3_Week_3_Tue: String
+  Month_3_Week_3_Wed: String
+  Month_3_Week_3_Thu: String
+  Month_3_Week_3_Fri: String
+  Month_3_Week_3_Sat: String
+  Month_3_Week_3_Total_Hours: String
+  Month_3_Week_3_Weekly_Wages: String
   Month_3_Week_4: String
-  Month_3_Week_4_Sun: Float
-  Month_3_Week_4_Mon: Float
-  Month_3_Week_4_Tue: Float
-  Month_3_Week_4_Wed: Float
-  Month_3_Week_4_Thu: Float
-  Month_3_Week_4_Fri: Float
-  Month_3_Week_4_Sat: Float
-  Month_3_Week_4_Total_Hours: Float
-  Month_3_Week_4_Weekly_Wages: Float
-  Month_3_Total_Sun: Float
-  Month_3_Total_Mon: Float
-  Month_3_Total_Tue: Float
-  Month_3_Total_Wed: Float
-  Month_3_Total_Thu: Float
-  Month_3_Total_Fri: Float
-  Month_3_Total_Sat: Float
-  Month_3_Total_Hours: Float
-  Month_3_Total_Weekly_Wages: Float
+  Month_3_Week_4_Sun: String
+  Month_3_Week_4_Mon: String
+  Month_3_Week_4_Tue: String
+  Month_3_Week_4_Wed: String
+  Month_3_Week_4_Thu: String
+  Month_3_Week_4_Fri: String
+  Month_3_Week_4_Sat: String
+  Month_3_Week_4_Total_Hours: String
+  Month_3_Week_4_Weekly_Wages: String
+  Month_3_Total_Sun: String
+  Month_3_Total_Mon: String
+  Month_3_Total_Tue: String
+  Month_3_Total_Wed: String
+  Month_3_Total_Thu: String
+  Month_3_Total_Fri: String
+  Month_3_Total_Sat: String
+  Month_3_Total_Hours: String
+  Month_3_Total_Weekly_Wages: String
   Month_4: String
   Month_4_Week_1: String
-  Month_4_Week_1_Sun: Float
-  Month_4_Week_1_Mon: Float
-  Month_4_Week_1_Tue: Float
-  Month_4_Week_1_Wed: Float
-  Month_4_Week_1_Thu: Float
-  Month_4_Week_1_Fri: Float
-  Month_4_Week_1_Sat: Float
-  Month_4_Week_1_Total_Hours: Float
-  Month_4_Week_1_Weekly_Wages: Float
+  Month_4_Week_1_Sun: String
+  Month_4_Week_1_Mon: String
+  Month_4_Week_1_Tue: String
+  Month_4_Week_1_Wed: String
+  Month_4_Week_1_Thu: String
+  Month_4_Week_1_Fri: String
+  Month_4_Week_1_Sat: String
+  Month_4_Week_1_Total_Hours: String
+  Month_4_Week_1_Weekly_Wages: String
   Month_4_Week_2: String
-  Month_4_Week_2_Sun: Float
-  Month_4_Week_2_Mon: Float
-  Month_4_Week_2_Tue: Float
-  Month_4_Week_2_Wed: Float
-  Month_4_Week_2_Thu: Float
-  Month_4_Week_2_Fri: Float
-  Month_4_Week_2_Sat: Float
-  Month_4_Week_2_Total_Hours: Float
-  Month_4_Week_2_Weekly_Wages: Float
+  Month_4_Week_2_Sun: String
+  Month_4_Week_2_Mon: String
+  Month_4_Week_2_Tue: String
+  Month_4_Week_2_Wed: String
+  Month_4_Week_2_Thu: String
+  Month_4_Week_2_Fri: String
+  Month_4_Week_2_Sat: String
+  Month_4_Week_2_Total_Hours: String
+  Month_4_Week_2_Weekly_Wages: String
   Month_4_Week_3: String
-  Month_4_Week_3_Sun: Float
-  Month_4_Week_3_Mon: Float
-  Month_4_Week_3_Tue: Float
-  Month_4_Week_3_Wed: Float
-  Month_4_Week_3_Thu: Float
-  Month_4_Week_3_Fri: Float
-  Month_4_Week_3_Sat: Float
-  Month_4_Week_3_Total_Hours: Float
-  Month_4_Week_3_Weekly_Wages: Float
+  Month_4_Week_3_Sun: String
+  Month_4_Week_3_Mon: String
+  Month_4_Week_3_Tue: String
+  Month_4_Week_3_Wed: String
+  Month_4_Week_3_Thu: String
+  Month_4_Week_3_Fri: String
+  Month_4_Week_3_Sat: String
+  Month_4_Week_3_Total_Hours: String
+  Month_4_Week_3_Weekly_Wages: String
   Month_4_Week_4: String
-  Month_4_Week_4_Sun: Float
-  Month_4_Week_4_Mon: Float
-  Month_4_Week_4_Tue: Float
-  Month_4_Week_4_Wed: Float
-  Month_4_Week_4_Thu: Float
-  Month_4_Week_4_Fri: Float
-  Month_4_Week_4_Sat: Float
-  Month_4_Week_4_Total_Hours: Float
-  Month_4_Week_4_Weekly_Wages: Float
-  Month_4_Total_Sun: Float
-  Month_4_Total_Mon: Float
-  Month_4_Total_Tue: Float
-  Month_4_Total_Wed: Float
-  Month_4_Total_Thu: Float
-  Month_4_Total_Fri: Float
-  Month_4_Total_Sat: Float
-  Month_4_Total_Hours: Float
-  Month_4_Total_Weekly_Wages: Float
+  Month_4_Week_4_Sun: String
+  Month_4_Week_4_Mon: String
+  Month_4_Week_4_Tue: String
+  Month_4_Week_4_Wed: String
+  Month_4_Week_4_Thu: String
+  Month_4_Week_4_Fri: String
+  Month_4_Week_4_Sat: String
+  Month_4_Week_4_Total_Hours: String
+  Month_4_Week_4_Weekly_Wages: String
+  Month_4_Total_Sun: String
+  Month_4_Total_Mon: String
+  Month_4_Total_Tue: String
+  Month_4_Total_Wed: String
+  Month_4_Total_Thu: String
+  Month_4_Total_Fri: String
+  Month_4_Total_Sat: String
+  Month_4_Total_Hours: String
+  Month_4_Total_Weekly_Wages: String
   Student_Signature_Form_404: Boolean
   Student_Signature_Date_Form_404: AWSDate
   Supervisor_Signature_Form_404: Boolean
@@ -290,26 +290,26 @@ type InternForm @model @auth(rules: [{allow: public, operations: [read, update, 
   Student_Signature_Date_Form_405: AWSDate
   Week_1: String
   Week_1_Activities: String
-  Week_1_Hours: Float
+  Week_1_Hours: String
   Week_2: String
   Week_2_Activities: String
-  Week_2_Hours: Float
+  Week_2_Hours: String
   Week_3: String
   Week_3_Activities: String
-  Week_3_Hours: Float
+  Week_3_Hours: String
   Week_4: String
   Week_4_Activities: String
-  Week_4_Hours: Float
+  Week_4_Hours: String
   Week_5: String
   Week_5_Activities: String
-  Week_5_Hours: Float
+  Week_5_Hours: String
   Week_6: String
   Week_6_Activities: String
-  Week_6_Hours: Float
+  Week_6_Hours: String
   Week_7: String
   Week_7_Activities: String
-  Week_7_Hours: Float
-  Total_Hours: Float
+  Week_7_Hours: String
+  Total_Hours: String
   Form_401: String
   Form_402: String
   Form_403: String
