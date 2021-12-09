@@ -28,6 +28,22 @@ function App() {
   const [validated3, setValidated3] = useState(false); //the validation stuff
   const [activeItem, setActiveItem] = useState("/employer");
   const [name, getname] = useState("");
+  const [wnum, getwnum] = useState("");
+  const [email, getemail] = useState("");
+  const [cellnum, getcellnum] = useState("");
+  const [homenum, gethomenum] = useState("");
+  const [worknum, getworknum] = useState("");
+  const [presAdd, getpresAdd] = useState("");
+  const [permAdd, getpermAdd] = useState("");
+  const [degree, getdegree] = useState("");
+  const [semHours, getsemHours] = useState("");
+  const [majorGPA, getmajorGPA] = useState("");
+  const [expGradDate, getexpGradDate] = useState("");
+  const [supName, getsupName] = useState("");
+  const [empStatus, getempStatus] = useState("");
+  const [jobTitle, getjobTitle] = useState("");
+  const [jobRes, getjobRes] = useState("");
+
   const [comName, getcomName] = useState("");
   const [comAdd, getcomAdd] = useState("");
   const [empCity, getempCity] = useState("");
@@ -49,11 +65,6 @@ function App() {
   const [form410, getform410] = useState("");
   // eslint-disable-next-line
   const [form420, getform420] = useState("");
-  // const [empStatus, getempStatus] = useState("");
-  // const [jobTitle, getjobTitle] = useState("");
-  // const [jobRes, getjobRes] = useState("");
-  // const [stuDigSig401, getstuDigSig401] = useState("");
-  // const [stuDigSigDate401, getstuDigSigDate401] = useState("");
   // eslint-disable-next-line
   const [supemail, getsupemail] = useState("");
   // eslint-disable-next-line
@@ -62,7 +73,7 @@ function App() {
   const [hourswork, gethourswork] = useState("");
   // eslint-disable-next-line
   const [empDigSig402, getempDigSig402] = useState("");
-  const [empDigSigDate402, getempDigSigDate402] = useState("");
+  const [empDigSigDate402, getfacDigSigDate402] = useState("");
   const [goal1, getgoal1] = useState("");
   // eslint-disable-next-line
   const [suprate1, getsuprate1] = useState("");
@@ -72,10 +83,16 @@ function App() {
   const [goal3, getgoal3] = useState("");
   // eslint-disable-next-line
   const [suprate3, getsuprate3] = useState("");
-  const [empDigSigDate403, getempDigSigDate403] = useState("");
+  const [facDigSigDate403, getfacDigSigDate403] = useState("");
   const [formy, getformy] = useState("");
   const [ver, getver] = useState("");
   const [id, getid] = useState("");
+  const [decrecdep, getdecrecdep] = useState("");
+  const [actiontaken, getactiontaken] = useState("");
+  const [reasons, getreasons] = useState("");
+  const [facDigSigDate401, getfacDigSigDate401] = useState("");
+  const [DHDigSigDate401, getDHDigSigDate401] = useState("");
+  const [DeanDigSigDate401, getDeanDigSigDate401] = useState("");
   const [forms, setForms] = useState([]);
   // eslint-disable-next-line
   const [formState, setFormState] = useState({Student_Name: '', W_Num: '', Student_Cell_Num: '', Student_Home_Phone: '', Student_Email: '', Student_Work_Number: '', Student_Present_Address: '', Student_Permanent_Address: "", Degree: "", Semester_Hours_Earned: "", Major_GPA: "", Expected_Grad_Date: "", Company_Name: "", Company_Address: "", Name_and_Title_Immediate_Supervisor: "", Supervisor_Email: "", Supervisor_Phone: "", Proposed_Start: "", Proposed_End: "", Employed_Full: "", Job_Title: "", Job_Responsibilities: "", Student_Signature_Form_401: false, Student_Signature_Date_Form_401: "", Date_Rec_Dep: "", Action_Taken: "", Reason: "", Faculty_Signature_Form_401: false, Faculty_Signature_Date_Form_401: "", Dep_Head_Signature_Form_401: false, Dep_Head_Signature_Date_Form_401: "", Dean_Signature_Form_401: false, Dean_Signature_Date_Form_401: "", Semester_And_Year: "", Hours_Per_Week: "", Employer_Signature_Form_402: false, Employer_City: "", Employer_State: "", Employer_Zip: 0, Student_Signature_Form_402: false, Student_Signature_Date_Form_402: "", Student_Will_Accomplish_1: "", Supervisor_Rating_1: "", Student_Will_Accomplish_2: "", Supervisor_Rating_2: "", Student_Will_Accomplish_3: "", Supervisor_Rating_3: "", Student_Signature_Form_403: false, Student_Signature_Date_Form_403: "", Employer_Signature_Form_403: false, Employer_Signature_Date_Form_403: "", Intern_Cord_Signature_Form_403: false, Intern_Cord_Signature_Date_Form_403: "", Total_Hours_For_Semester: "", Total_Wages_For_Deduction: 1.5, Month_1: "", Month_1_Week_1: "", Month_1_Week_1_Sun: 1.5, Month_1_Week_1_Mon: 1.5, Month_1_Week_1_Tue: 1.5, Month_1_Week_1_Wed: 1.5, Month_1_Week_1_Thu: 1.5, Month_1_Week_1_Fri: 1.5, Month_1_Week_1_Sat: 1.5, Month_1_Week_1_Total_Hours: 1.5, Month_1_Week_1_Weekly_Wages: 1.5, Month_1_Week_2: "", Month_1_Week_2_Sun: 1.5, Month_1_Week_2_Mon: 1.5, Month_1_Week_2_Tue: 1.5, Month_1_Week_2_Wed: 1.5, Month_1_Week_2_Thu: 1.5, Month_1_Week_2_Fri: 1.5, Month_1_Week_2_Sat: 1.5, Month_1_Week_2_Total_Hours: 1.5, Month_1_Week_2_Weekly_Wages: 1.5, Month_1_Week_3: "", Month_1_Week_3_Sun: 1.5, Month_1_Week_3_Mon: 1.5, Month_1_Week_3_Tue: 1.5, Month_1_Week_3_Wed: 1.5, Month_1_Week_3_Thu: 1.5, Month_1_Week_3_Fri: 1.5, Month_1_Week_3_Sat: 1.5, Month_1_Week_3_Total_Hours: 1.5, Month_1_Week_3_Weekly_Wages: 1.5, Month_1_Week_4: "", Month_1_Week_4_Sun: 1.5, Month_1_Week_4_Mon: 1.5, Month_1_Week_4_Tue: 1.5, Month_1_Week_4_Wed: 1.5, Month_1_Week_4_Thu: 1.5, Month_1_Week_4_Fri: 1.5, Month_1_Week_4_Sat: 1.5, Month_1_Week_4_Total_Hours: 1.5, Month_1_Week_4_Weekly_Wages: 1.5, Month_1_Total_Sun: 1.5, Month_1_Total_Mon: 1.5, Month_1_Total_Tue: 1.5, Month_1_Total_Wed: 1.5, Month_1_Total_Thu: 1.5, Month_1_Total_Fri: 1.5, Month_1_Total_Sat: 1.5, Month_1_Total_Hours: 1.5, Month_1_Total_Weekly_Wages: 1.5, Month_2: "", Month_2_Week_1: "", Month_2_Week_1_Sun: 1.5, Month_2_Week_1_Mon: 1.5, Month_2_Week_1_Tue: 1.5, Month_2_Week_1_Wed: 1.5, Month_2_Week_1_Thu: 1.5, Month_2_Week_1_Fri: 1.5, Month_2_Week_1_Sat: 1.5, Month_2_Week_1_Total_Hours: 1.5, Month_2_Week_1_Weekly_Wages: 1.5, Month_2_Week_2: "", Month_2_Week_2_Sun: 1.5, Month_2_Week_2_Mon: 1.5, Month_2_Week_2_Tue: 1.5, Month_2_Week_2_Wed: 1.5, Month_2_Week_2_Thu: 1.5, Month_2_Week_2_Fri: 1.5, Month_2_Week_2_Sat: 1.5, Month_2_Week_2_Total_Hours: 1.5, Month_2_Week_2_Weekly_Wages: 1.5, Month_2_Week_3: "", Month_2_Week_3_Sun: 1.5, Month_2_Week_3_Mon: 1.5, Month_2_Week_3_Tue: 1.5, Month_2_Week_3_Wed: 1.5, Month_2_Week_3_Thu: 1.5, Month_2_Week_3_Fri: 1.5, Month_2_Week_3_Sat: 1.5, Month_2_Week_3_Total_Hours: 1.5, Month_2_Week_3_Weekly_Wages: 1.5, Month_2_Week_4: "", Month_2_Week_4_Sun: 1.5, Month_2_Week_4_Mon: 1.5, Month_2_Week_4_Tue: 1.5, Month_2_Week_4_Wed: 1.5, Month_2_Week_4_Thu: 1.5, Month_2_Week_4_Fri: 1.5, Month_2_Week_4_Sat: 1.5, Month_2_Week_4_Total_Hours: 1.5, Month_2_Week_4_Weekly_Wages: 1.5, Month_2_Total_Sun: 1.5, Month_2_Total_Mon: 1.5, Month_2_Total_Tue: 1.5, Month_2_Total_Wed: 1.5, Month_2_Total_Thu: 1.5, Month_2_Total_Fri: 1.5, Month_2_Total_Sat: 1.5, Month_2_Total_Hours: 1.5, Month_2_Total_Weekly_Wages: 1.5, Month_3: "", Month_3_Week_1: "", Month_3_Week_1_Sun: 1.5, Month_3_Week_1_Mon: 1.5, Month_3_Week_1_Tue: 1.5, Month_3_Week_1_Wed: 1.5, Month_3_Week_1_Thu: 1.5, Month_3_Week_1_Fri: 1.5, Month_3_Week_1_Sat: 1.5, Month_3_Week_1_Total_Hours: 1.5, Month_3_Week_1_Weekly_Wages: 1.5, Month_3_Week_2: "", Month_3_Week_2_Sun: 1.5, Month_3_Week_2_Mon: 1.5, Month_3_Week_2_Tue: 1.5, Month_3_Week_2_Wed: 1.5, Month_3_Week_2_Thu: 1.5, Month_3_Week_2_Fri: 1.5, Month_3_Week_2_Sat: 1.5, Month_3_Week_2_Total_Hours: 1.5, Month_3_Week_2_Weekly_Wages: 1.5, Month_3_Week_3: "", Month_3_Week_3_Sun: 1.5, Month_3_Week_3_Mon: 1.5, Month_3_Week_3_Tue: 1.5, Month_3_Week_3_Wed: 1.5, Month_3_Week_3_Thu: 1.5, Month_3_Week_3_Fri: 1.5, Month_3_Week_3_Sat: 1.5, Month_3_Week_3_Total_Hours: 1.5, Month_3_Week_3_Weekly_Wages: 1.5, Month_3_Week_4: "", Month_3_Week_4_Sun: 1.5, Month_3_Week_4_Mon: 1.5, Month_3_Week_4_Tue: 1.5, Month_3_Week_4_Wed: 1.5, Month_3_Week_4_Thu: 1.5, Month_3_Week_4_Fri: 1.5, Month_3_Week_4_Sat: 1.5, Month_3_Week_4_Total_Hours: 1.5, Month_3_Week_4_Weekly_Wages: 1.5, Month_3_Total_Sun: 1.5, Month_3_Total_Mon: 1.5, Month_3_Total_Tue: 1.5, Month_3_Total_Wed: 1.5, Month_3_Total_Thu: 1.5, Month_3_Total_Fri: 1.5, Month_3_Total_Sat: 1.5, Month_3_Total_Hours: 1.5, Month_3_Total_Weekly_Wages: 1.5, Month_4: "", Month_4_Week_1: "", Month_4_Week_1_Sun: 1.5, Month_4_Week_1_Mon: 1.5, Month_4_Week_1_Tue: 1.5, Month_4_Week_1_Wed: 1.5, Month_4_Week_1_Thu: 1.5, Month_4_Week_1_Fri: 1.5, Month_4_Week_1_Sat: 1.5, Month_4_Week_1_Total_Hours: 1.5, Month_4_Week_1_Weekly_Wages: 1.5, Month_4_Week_2: "", Month_4_Week_2_Sun: 1.5, Month_4_Week_2_Mon: 1.5, Month_4_Week_2_Tue: 1.5, Month_4_Week_2_Wed: 1.5, Month_4_Week_2_Thu: 1.5, Month_4_Week_2_Fri: 1.5, Month_4_Week_2_Sat: 1.5, Month_4_Week_2_Total_Hours: 1.5, Month_4_Week_2_Weekly_Wages: 1.5, Month_4_Week_3: "", Month_4_Week_3_Sun: 1.5, Month_4_Week_3_Mon: 1.5, Month_4_Week_3_Tue: 1.5, Month_4_Week_3_Wed: 1.5, Month_4_Week_3_Thu: 1.5, Month_4_Week_3_Fri: 1.5, Month_4_Week_3_Sat: 1.5, Month_4_Week_3_Total_Hours: 1.5, Month_4_Week_3_Weekly_Wages: 1.5, Month_4_Week_4: "", Month_4_Week_4_Sun: 1.5, Month_4_Week_4_Mon: 1.5, Month_4_Week_4_Tue: 1.5, Month_4_Week_4_Wed: 1.5, Month_4_Week_4_Thu: 1.5, Month_4_Week_4_Fri: 1.5, Month_4_Week_4_Sat: 1.5, Month_4_Week_4_Total_Hours: 1.5, Month_4_Week_4_Weekly_Wages: 1.5, Month_4_Total_Sun: 1.5, Month_4_Total_Mon: 1.5, Month_4_Total_Tue: 1.5, Month_4_Total_Wed: 1.5, Month_4_Total_Thu: 1.5, Month_4_Total_Fri: 1.5, Month_4_Total_Sat: 1.5, Month_4_Total_Hours: 1.5, Month_4_Total_Weekly_Wages: 1.5, Student_Signature_Form_404: false, Student_Signature_Date_Form_404: "", Supervisor_Signature_Form_404: false, Supervisor_Signature_Date_Form_404: "", Date_Form_420: "", Relations_With_Others: "", Attitude_Application_To_Work: "", Judgement: "", Dependability: "", Ability_To_Learn: "", Quality_Of_Work: "", Overall_Performance: "", Attendance: "", Punctuality: "", Remarks: "", Report_Discussed_With_Student: "", Student_Signature_Form_420: false, Student_Signature_Date_Form_420: "", Supervisor_Signature_Form_420: false, Supervisor_Signature_Date_Form_420: "", Supervisor_Name: "", Rating_Of_Employer: "", Rating_Of_Work_Exp: "", Relation_To_CMPS_Studies: "", Rating_Of_Learning_Of_Internship: "", Would_You_Repeat: "", Would_You_Repeat_Explain: "", Would_You_Recommend: "", Would_You_Recommend_Explain: "", Additional_Content_For_Curriculum: "", Any_Additional_Comments: "", Student_Signature_Form_405: false, Student_Signature_Date_Form_405: "", Week_1: "", Week_1_Activities: "", Week_1_Hours: 1.5, Week_2: "", Week_2_Activities: "", Week_2_Hours: 1.5, Week_3: "", Week_3_Activities: "", Week_3_Hours: 1.5, Week_4: "", Week_4_Activities: "", Week_4_Hours: 1.5, Week_5: "", Week_5_Activities: "", Week_5_Hours: 1.5, Week_6: "", Week_6_Activities: "", Week_6_Hours: 1.5, Week_7: "", Week_7_Activities: "", Week_7_Hours: 1.5, Total_Hours: 1.5, Form_401: "", Form_402: "", Form_403: "", Form_404: "", Form_405: "", Form_420: "", Form_410: "", sup_sig_date_form_402: "", compl_sup_sig_form_403: false, compl_sup_sig_date_form_403: ""});
@@ -103,39 +120,37 @@ function App() {
   // }
 
   async function updateForm(){
-    // console.log(formy.Employer_City)
     delete formy._deleted
     delete formy._lastChangedAt
     delete formy._version
     delete formy.createdAt
     delete formy.updatedAt
-    formy.Employer_City = empCity
-    formy.Employer_Signature_Form_402 = true
-    formy.Employer_State = empState
-    formy.Employer_Zip = empZip
-    //formy.Supervisor_Rating_1 = suprate1
-    //formy.Supervisor_Rating_2 = suprate2
-    //formy.Supervisor_Rating_3 = suprate3
-    formy.Employer_Signature_Form_402 = true
-    formy.sup_sig_date_form_402 = empDigSigDate402
-    formy.Employer_Signature_Date_Form_403 = empDigSigDate403 
-    formy.Employer_Signature_Form_403 = true
-    formy.Form_402 = "FIN"
-    formy.Form_403 = "SLUDH"
+    formy.Date_Rec_Dep = decrecdep
+    formy.Action_Taken = actiontaken
+    formy.Reason = reasons
+    formy.Faculty_Signature_Form_401 = true
+    formy.Faculty_Signature_Date_Form_401 = facDigSigDate401
+    formy.Dep_Head_Signature_Form_401 = true
+    formy.Dep_Head_Signature_Date_Form_401 = DHDigSigDate401
+    formy.Dean_Signature_Form_401 = true
+    formy.Dean_Signature_Date_Form_401 = DeanDigSigDate401
+    formy.Intern_Cord_Signature_Date_Form_403 = facDigSigDate403 
+    formy.Intern_Cord_Signature_Form_403 = true
+    formy.Form_401 = "FIN"
+    formy.Form_403 = "FINP1"
     delete formy.id
     console.log(formy)
     // formy.Employer_City
     try {
       const form = { ...formState }
       setForms([...forms, form])
-      //console.log("Submited")
+      console.log("Submited")
       const result = await API.graphql(graphqlOperation(createInternForm, { input: formy}))
       // const result = await API.graphql(graphqlOperation(updateInternForm, { input: {Employer_Signature_Form_403: true, Employer_Signature_Form_402: true, Employer_City: empCity, Employer_State: empState, Employer_Zip: empZip, Supervisor_Rating_1: suprate1, Supervisor_Rating_2: suprate2, Supervisor_Rating_3: suprate3, Employer_Signature_Form_402: true, sup_sig_date_form_402: empDigSigDate402, Employer_Signature_Date_Form_403: empDigSigDate403, Form_402: "FIN", Form_403: "SLU", id: id}}))
-      // console.log(result);
-      console.log(result.data.createInternForm.Student_Name);
+      console.log(result.data.Student_Name);
       emailjs.send("service_q3da0db","template_yiyoq7q",{
-        from_name: result.data.createInternForm.Student_Name,
-        ID: result.data.createInternForm.id,
+        from_name: result.data.Student_Name,
+        ID: result.data.id,
         },'user_u6qr1k5zmEmoeXO2E4DxC')
         .then(() => {
           console.log("Message Sent, We will get back to you shortly");
@@ -174,16 +189,19 @@ function App() {
      getformy(result.data.getInternForm);
      console.log(formy);
      getver(result.data.getInternForm._version);
-    //  console.log(formy2);
-    //  console.log("Formy2: ", formy2._version);
-    //  console.log(result.data.getInternForm.Student_Name)
-    //  getid(result.data.createInternForm.id);
+    getwnum(result.data.getInternForm.W_Num);
     getname(result.data.getInternForm.Student_Name);
     getcomName(result.data.getInternForm.Company_Name);
-    getname(result.data.getInternForm.Hours_Per_Week);
+    getname(result.data.getInternForm.Student_Name);
     getempStartDate(result.data.getInternForm.Proposed_Start);
     getempEndDate(result.data.getInternForm.Proposed_End);
     getcomAdd(result.data.getInternForm.Company_Address);
+    getsupName(result.data.getInternForm.Name_and_Title_Immediate_Supervisor);
+    getempStatus(result.data.getInternForm.Employed_Full);
+    getjobTitle(result.data.getInternForm.Job_Title);
+    getjobRes(result.data.getInternForm.Job_Responsibilities);
+    getsupemail(result.data.getInternForm.Supervisor_Email);
+    getsupNum(result.data.getInternForm.Supervisor_Phone)
     getform401(result.data.getInternForm.Form_401);
     getform402(result.data.getInternForm.Form_402);
     getform403(result.data.getInternForm.Form_403);
@@ -194,21 +212,29 @@ function App() {
     getgoal1(result.data.getInternForm.Student_Will_Accomplish_1);
     getgoal2(result.data.getInternForm.Student_Will_Accomplish_2);
     getgoal3(result.data.getInternForm.Student_Will_Accomplish_3);
-    // getsuprate1(result.data.getInternForm.Supervisor_Rating_1);
-    // getsuprate2(result.data.getInternForm.Supervisor_Rating_2);
-    // getsuprate3(result.data.getInternForm.Supervisor_Rating_3);
+    getemail(result.data.getInternForm.Student_Email);
+    getcellnum(result.data.getInternForm.Student_Cell_Num);
+    gethomenum(result.data.getInternForm.Student_Home_Phone);
+    getworknum(result.data.getInternForm.Student_Work_Number);
+    getpresAdd(result.data.getInternForm.Student_Present_Address);
+    getpermAdd(result.data.getInternForm.Student_Permanent_Address);
+    getdegree(result.data.getInternForm.Degree);
+    getsemHours(result.data.getInternForm.Semester_Hours_Earned);
+    getmajorGPA(result.data.getInternForm.Major_GPA);
+    getexpGradDate(result.data.getInternForm.Expected_Grad_Date);
     getsemnyear(result.data.getInternForm.Semester_And_Year);
     gethourswork(result.data.getInternForm.hourswork);
-    console.log()
+    // console.log()
    } catch (err) {
      console.log('error getting data, or id given does not exist:', err)
    }
  }
 
   function IDfinder(){
-    for(var i = 10; i <= currpath.length; i++ ){
+    for(var i = 9; i <= currpath.length; i++ ){
       ID += currpath.charAt(i);
     }
+    console.log(ID);
   }
 
   function denyos(){
@@ -239,21 +265,21 @@ function App() {
   }
 
   const handleSubmit2 = (event) => {
-    document.getElementById("emp402").style.display = "block";
+    document.getElementById("fac401").style.display = "block";
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
     else if (form.checkValidity() === true){
-      if (document.getElementById("emp402").style.display === "block"){
-        document.getElementById("emp403").style.display = "block";
-        document.getElementById("emp402").style.display = "none";
+      if (document.getElementById("fac401").style.display === "block"){
+        document.getElementById("fac403").style.display = "block";
+        document.getElementById("fac401").style.display = "none";
         event.preventDefault();
         event.stopPropagation();
         topFunction();
-      } else if (document.getElementById("emp403").style.display === "block"){
-        document.getElementById("emp403").style.display = "none";
+      } else if (document.getElementById("fac403").style.display === "block"){
+        document.getElementById("fac403").style.display = "none";
         event.preventDefault();
         event.stopPropagation();
       }
@@ -271,14 +297,14 @@ function App() {
       event.stopPropagation();
     }
     else if (form.checkValidity() === true){
-      if (document.getElementById("emp403").style.display === "block"){
-        document.getElementById("emp403").style.display = "none";
+      if (document.getElementById("fac403").style.display === "block"){
+        document.getElementById("fac403").style.display = "none";
         document.getElementById("formdone").style.display = "block";
         event.preventDefault();
         event.stopPropagation();
         topFunction();
         updateForm();
-        //deleteold()
+        deleteold()
         // emailsender();
       }
     } else{
@@ -344,181 +370,380 @@ function App() {
       <div id="AppForm">
       <div className="App-Form">
   
-        <div id="emp402">
-
+      <div id="fac401">
         <Form noValidate validated={validated2} onSubmit={handleSubmit2}>
-
-        <Form.Group className="mb-3">
-            <Form.Label><b>CS Form 402</b></Form.Label>
-            <Form.Label><b>Internship Employer Agreement</b></Form.Label>
+          <Form.Group className="mb-3">
+            <Form.Label><b>CS Form 401: Application for Internship</b></Form.Label>
           </Form.Group>
 
-          <Row>
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Name:</Form.Label>
+            </Col>
             <Col>
-              <Form.Control required type="text" defaultValue = {name} placeholder="Student Name" disabled/>
+              <Form.Control disabled type="text" value={name} placeholder="Enter your Name" onChange={(e)=> getname(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              HOW DID YOU BREAK THIS you numpty!?
+              Please enter your name.
             </Form.Control.Feedback>
             </Col>
 
             <Col xs="auto">
-              <Form.Label>will be employed by</Form.Label>
+              <Form.Label>W#:</Form.Label>
             </Col>
             <Col>
-              <Form.Control required type="text" defaultValue = {comName} placeholder="Company Name" disabled/>
+              <Form.Control disabled type="text" value={wnum} placeholder="Enter W#" onChange={(e)=> getwnum(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              HOW DID YOU BREAK THIS you numpty!?
+              Please enter your W#.
+            </Form.Control.Feedback>
+            </Col>
+
+            <Col xs="auto">
+              <Form.Label>Email:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="email" value={email} placeholder="Enter Email" onChange={(e)=> getemail(e.target.value)} disabled/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your email.
             </Form.Control.Feedback>
             </Col>
           </Row>
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
-              <Form.Label>during the semester</Form.Label>
+              <Form.Label>Cell Phone #:</Form.Label>
             </Col>
             <Col>
-              <Form.Control disabled placeholder="Enter semester and year" defaultValue = {semnyear}/>
+              <Form.Control disabled type="tel" value={cellnum} pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" maxlength="10" id="phoneNumber" placeholder="Enter Your Phone Number" onChange={(e)=> getcellnum(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              Please enter a semester term and year.
+              Please enter your phone number.
+            </Form.Control.Feedback>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Home Phone #:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="tel" value={homenum} pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" maxlength="10" placeholder="Enter Your Home Phone Number" onChange={(e)=> gethomenum(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your home number.
+            </Form.Control.Feedback>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Work Phone #:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="tel" value={worknum} pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" maxlength="10" placeholder="Enter Your Work Phone Number" onChange={(e)=> getworknum(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your work number.
             </Form.Control.Feedback>
             </Col>
           </Row>
-
           <Form.Label></Form.Label>
-          <Row>
+
+          <Row id="FIX">
             <Col xs="auto">
-              <Form.Label>The student will work</Form.Label>
+              <Form.Label>Present Address:</Form.Label>
             </Col>
-            <Col xs={3}>
-              <Form.Control disabled type="number" placeholder="Enter hours" defaultValue = {hourswork}/>
+            <Col>
+              <Form.Control disabled maxlength="30" value={presAdd} placeholder="1234 Main St" onChange={(e)=> getpresAdd(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              Please enter how many hours you will work a week.
+              Please enter your present address.
             </Form.Control.Feedback>
             </Col>
 
             <Col xs="auto">
-              <Form.Label>hours per week for the semester beginning</Form.Label>
+              <Form.Label>Permanent Address:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled maxlength="30" value={permAdd} placeholder="1234 Main St" onChange={(e)=> getpermAdd(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your permanant address.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Degree:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled maxlength="30" value={degree} placeholder="Your Degree" onChange={(e)=> getdegree(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your degree.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Semester Hours Earned:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="text" pattern="[0-9]*" value={semHours} maxlength="3" placeholder="Total Hours Earned" onChange={(e)=> getsemHours(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your total hours earned.
+            </Form.Control.Feedback>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Major GPA:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="text" maxlength="3" value={majorGPA} placeholder="GPA of your major classes" onChange={(e)=> getmajorGPA(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your major classes GPA.
+            </Form.Control.Feedback>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Expected Graduation Date:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled placeholder="Spring 20XX" value={expGradDate} onChange={(e)=> getexpGradDate(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your epected graduation date.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Companies’s Name:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled placeholder="Enter Employer's Name" value={comName} onChange={(e)=> getcomName(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter the companies name.
+            </Form.Control.Feedback>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Companies's Address:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled placeholder="1234 Main St" value={comAdd} onChange={(e)=> getcomAdd(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter the company address.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Name and Title of Immediate Supervisor:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled maxlength="38" value={supName} placeholder="Johnny Appleseed Apple placehoder guy" onChange={(e)=> getsupName(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter yours supervisors name and title.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row  id="FIX">
+            <Col xs="auto">
+              <Form.Label>Supervisor’s E-Mail:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value={supemail} placeholder="Enter Your Supervisors Email here" onChange={(e)=> getsupemail(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your supervisors email.
+            </Form.Control.Feedback>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Supervisor’s Phone #:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled type="tel" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" value={supNum} maxlength="10" placeholder="Enter Your Supervisors Phone # here" onChange={(e)=> getsupNum(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your your supervisors number.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Proposed Dates of Employment:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Start:</Form.Label>
             </Col>
             <Col xs={2}>
-              <Form.Control required defaultValue = {empStartDate} type="date" disabled/>
+              <Form.Control disabled type="date" value={empStartDate} onChange={(e)=> getempStartDate(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              HOW DID YOU BREAK THIS you numpty!?
+              Please enter the job start date.
             </Form.Control.Feedback>
             </Col>
-            <Col xs="auto">
-              <Form.Label>, and</Form.Label>
-            </Col>
-          </Row>
 
-          <Form.Label></Form.Label>
-          <Row>
-            <Col xs="auto">
-              <Form.Label>ending on</Form.Label>
+            <Col sm="auto">
+              <Form.Label>End:</Form.Label>
             </Col>
             <Col xs={2}>
-              <Form.Control required defaultValue = {empEndDate} type="date" disabled/>
+              <Form.Control disabled type="date" value={empEndDate} onChange={(e)=> getempEndDate(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              HOW DID YOU BREAK THIS you numpty!?
+              Please enter the job end date.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Employed:</Form.Label>
+            </Col>
+            <Col xs="auto">
+                <Form.Label></Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Select disabled defaultValue="Pick An Employment Status" value={empStatus} onChange={(e)=> getempStatus(e.target.value)}>
+                <option></option>
+                <option>part-time (at least 20 hours per week)</option>
+                <option>full-time (at least 40 hours per week)</option>
+              </Form.Select>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please pick your employment status.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Job Title:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled placeholder="Enter your Job title" value={jobTitle} onChange={(e)=> getjobTitle(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter your job title.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Job Responsibilities:</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control disabled as="textarea" placeholder="Enter the responcibilities of your job" value={jobRes} style={{ height: '100px' }} onChange={(e)=> getjobRes(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please the job Responsibilities.
             </Form.Control.Feedback>
             </Col>
           </Row>
 
-
           <Form.Group className="mb-3">
-            <Form><b>CONDITIONS OF AGREEMENT</b></Form>
+            <Form>DO NOT WRITE BELOW THIS LINE</Form>
           </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form align='left'><b>1.</b> The employer must provide workers compensation coverage for the student intern. </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'><b>2.</b> The student is expected to be employed 20 hours per week for three hours of credit during the fall and
-            spring semesters, or for 40 hours per week for three hours of credit for the summer semester. </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'><b>3.</b> All employment transfers, withdrawals, or dismissals shall be made jointly by the Department Head,
-              student, and employer. </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'><b>4.</b> Students must submit the following completed forms and all other assignments by 4:00 p.m. on the last
-            class day of the semester: </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'>• Students Evaluation of the Internship Employer CS Form 410 Students Measurable Learning
-            Objectives CS Form 403 </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'>• The Employers Evaluation of the internship Student CS Form 420</Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'>• Time and Wage Report CS Form 404</Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'>• Activity Log CS Form 405  Three Activity Reports </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'>• Three Page Executive Summary </Form>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form align='left'>I have read the above agreement and agree in full to the conditions set forth. </Form>
-          </Form.Group>
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Date Application Received by Department:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control required type="date" onChange={(e)=> getdecrecdep(e.target.value)} />
+            </Col>
+          </Row>
 
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Action Taken:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Select required defaultValue="Pick An Action" onChange={(e)=> getactiontaken(e.target.value)}>
+                  <option></option>
+                  <option>Approved</option>
+                  <option>Not Approved</option>
+                </Form.Select>
+                <Form.Label></Form.Label>
+              </Col>
+          </Row>
           <Form.Label></Form.Label>
 
-          <Row className="mb-3">
-            <Form.Group as={Col} xs={7}>
-              <Form.Check required type="checkbox" onChange={(e)=> getempDigSig402(e.target.value)}/>
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Reason(s):</Form.Label>
+            </Col>
+            <Col>
+              <Form.Control required placeholder="Reasons for Aproval or denial" onChange={(e)=> getreasons(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              Please give your digital signature.
+              Please enter a reason.
             </Form.Control.Feedback>
-              <Form.Label>Employer's Digital Signature</Form.Label>
-            </Form.Group>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
 
-            <Form.Group as={Col} xs={2}>
-              <Form.Control required type="date" onChange={(e)=> getempDigSigDate402(e.target.value)}/>
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Faculty Signature:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Check required type="checkbox" label="Digital signature" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control required type="date" onChange={(e)=> getfacDigSigDate401(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
               Please enter the date.
             </Form.Control.Feedback>
-              <Form.Label>Date</Form.Label>
-            </Form.Group>
-          </Row>
-
-          <Row>
-            <Col>
-              <Form.Control disabled placeholder="1234 Main St" defaultValue = {comAdd}/>
-              <Form.Label>Employer's Address</Form.Label>
-            </Col>
-            <Col>
-              <Form.Control required placeholder="Enter your City" onChange={(e)=> getempCity(e.target.value)}/>
-              <Form.Label>City</Form.Label>
-              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              Please enter your city.
-              </Form.Control.Feedback>
-            </Col>
-            <Col>
-              <Form.Control required placeholder="Enter your State" onChange={(e)=> getempState(e.target.value)}/>
-              <Form.Label>State</Form.Label>
-              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              Please enter your state.
-              </Form.Control.Feedback>
-            </Col>
-            <Col>
-              <Form.Control required placeholder="Enter your zip code" onChange={(e)=> getempZip(e.target.value)}/>
-              <Form.Label>Zip Code</Form.Label>
-              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
-              Please enter your zip code.
-              </Form.Control.Feedback>
             </Col>
           </Row>
+          <Form.Label></Form.Label>
 
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Department Head's Signature:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Check required type="checkbox" label="Digital signature" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control required type="date" onChange={(e)=> getDHDigSigDate401(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter the date.
+            </Form.Control.Feedback>
+            </Col>
+          </Row>
+          <Form.Label></Form.Label>
+
+          <Row id="FIX">
+            <Col xs="auto">
+              <Form.Label>Dean's Signature:</Form.Label>
+            </Col>
+            <Col xs="auto">
+              <Form.Check required type="checkbox" label="Digital signature" />
+            </Col>
+            <Col xs="auto">
+              <Form.Label>Date:</Form.Label>
+            </Col>
+            <Col xs={2}>
+              <Form.Control required type="date" onChange={(e)=> getDeanDigSigDate401(e.target.value)}/>
+              <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
+              Please enter the date.
+              </Form.Control.Feedback>
+            </Col>
+          </Row>
+
+          
+          {/* <Button variant="primary" onClick={handleSubmit}>
+            Next Page
+          </Button> */}
 
           <Button variant="primary" type="submit">
             Next Form
           </Button>
+        
 
         </Form>
         </div>
-        <div id="emp403">
+        <div id="fac403">
         <Form noValidate validated={validated3} onSubmit={handleSubmit3}>
 
         <Form.Group className="mb-3">
@@ -620,13 +845,13 @@ function App() {
           <Form.Label></Form.Label>
           <Row className="mb-3">
             <Form.Group as={Col} xs={7}>
-              <Form.Label>Employer's Digital Signature</Form.Label>
+              <Form.Label>Intern Coordinator's Digital Signature</Form.Label>
               <Form.Check required type="checkbox"/>
             </Form.Group>
 
             <Form.Group as={Col} xs={2}>
               <Form.Label>Date</Form.Label>
-              <Form.Control required type="date" onChange={(e)=> getempDigSigDate403(e.target.value)}/>
+              <Form.Control required type="date" onChange={(e)=> getfacDigSigDate403(e.target.value)}/>
               <Form.Control.Feedback type="invalid" style={{textAlign: "left"}}>
               Please enter the date.
             </Form.Control.Feedback>
@@ -656,7 +881,7 @@ function App() {
               onClick={() => setActiveItem("/")}>Return Home</Button>{' '}
           </Form>
         </div>
-        {/* <Button variant="primary" onClick={updateForm}>DEV BUTTON</Button> */}
+        {/* <Button variant="primary" onClick={deleteold}>DEV BUTTON</Button> */}
 
       </div>
       </div>

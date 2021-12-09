@@ -19,6 +19,8 @@ function App() {
   // const [cap, setcap] = useState(0);
   // const [room, setroom] = useState("");
   // const [approval, setapproval] = useState(false);
+
+  // const [activeItem, setActiveItem] = useState("/employer");
   const [typedID, getTypedID] = useState("")
   const [redirect, setRedirect] = useState(false);
   // const [formState, setFormState] = useState({
@@ -62,44 +64,18 @@ function App() {
 
   async function getdata(){
     try {
-      console.log(typedID);
-      const result = await API.graphql(graphqlOperation(getInternForm, {id: typedID} //,{
-        // Student_Name,
-        // Company_Name,
-        // Semester_And_Year,
-        // Hours_Per_Week,
-        // Proposed_Start,
-        // Proposed_End,
-        // Company_Address,
-        // Employer_City,
-        // Employer_State,
-        // Employer_Zip,
-        // Form_401,
-        // Form_402,
-        // Form_403,
-        // Form_404,
-        // Form_405,
-        // Form_410,
-        // Form_420,
-        // Student_Will_Accomplish_1,
-        // Student_Will_Accomplish_2,
-        // Student_Will_Accomplish_3,
-        // Supervisor_Rating_1,
-        // Supervisor_Rating_2,
-        // Supervisor_Rating_3,
-        // id,
-      // }
-      )
-      )
-      
-      
-     console.log("gotten")
-     console.log(result);
+      const result = await API.graphql(graphqlOperation(getInternForm, {id: typedID}))
+      console.log(result.data.getInternForm);
+      if(result.data.getInternForm != null){
+        setRedirect(true);
+        <Redirect to={`/employer/${typedID}`}/>
+      } else{
+        console.log("error getting data, or id given does not exist.")
+      }
     //  getid(result.data.createInternForm.id);
-    setRedirect(true);
-    <Redirect to={`/employer/${typedID}`}/>
    } catch (err) {
-     console.log('error getting data, or id given does not exist:', err)
+      setRedirect(false);
+      console.log('error getting data, or id given does not exist:', err)
    }
  }
 

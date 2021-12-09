@@ -1,15 +1,45 @@
-// import logo from '../../Photo/secCMPSLogoEdit.png';
-// import { Formik } from 'formik';
+import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import React, { useEffect } from 'react';
+import { Redirect } from "react-router-dom";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Navy from "../../Comp/Navbar/Navbar"
 import './Facilty.css';
+import { API, graphqlOperation } from 'aws-amplify';
 import logo from '../../Photo/SLU-shield.png';
+import { getInternForm } from '../../graphql/queries'
+
 function App() {
+
+  const [typedID, getTypedID] = useState("")
+  const [redirect, setRedirect] = useState(false);
+
+  async function getdata(){
+    try {
+      const result = await API.graphql(graphqlOperation(getInternForm, {id: typedID}))
+      console.log(result.data.getInternForm);
+      if(result.data.getInternForm != null){
+        // console.log("HELLOO")
+        setRedirect(true);
+        <Redirect to={`/faculty/${typedID}`}/>
+      } else{
+        console.log("error getting data, or id given does not exist.")
+      }
+    //  getid(result.data.createInternForm.id);
+   } catch (err) {
+      setRedirect(false);
+      console.log('error getting data, or id given does not exist:', err)
+   }
+ }
+ const handleSubmit = (event) => {
+  // eslint-disable-next-line
+ const form = event.currentTarget;
+ event.preventDefault();
+ event.stopPropagation();
+ getdata();
+};
 
   useEffect(()=>{
     denyos();
@@ -44,7 +74,7 @@ function App() {
   }
   
   
-  return (
+  return !redirect ?(
     
     <div className="App">
       
@@ -75,14 +105,14 @@ function App() {
       <div className="App-FormF">
         {/* <Card> */}
         <p><b>Welcome to the Online CMPS 400 Internship Form Facilty Portal</b></p>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Row>
             <Col xs="auto">
               <Form.Label>Form ID:</Form.Label>
             </Col>
             <Col>
-              <Form.Control type="string" placeholder="Enter The Form ID Sent by Email" />
+              <Form.Control type="string" placeholder="Enter The Form ID Sent by Email" onChange={(e)=> getTypedID(e.target.value)}/>
             </Col>
             </Row>
           </Form.Group>
@@ -97,7 +127,7 @@ function App() {
       </div>
       </Container>
     </div>
-  );
+  ) : (<Redirect to = {`/faculty/${typedID}`}/>);
 }
 
 export default App;
